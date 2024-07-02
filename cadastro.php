@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard | Login</title>
+    <title>Dashboard | Cadastro</title>
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -71,16 +71,25 @@
         
                     <div class="form-floating" style="margin-top: 20%;">
                         <input type="text" class="form-control" id="floatingInput" name="nome" placeholder="name@example.com">
-                        <label for="floatingInput">Nome</label>
-                    </div>
-                    <div class="form-floating" style="margin-top: 10px;">
-                        <input type="text" class="form-control" id="floatingInput" name="sobrenome" placeholder="name@example.com">
-                        <label for="floatingInput">Sobrenome</label>
+                        <label for="floatingInput">Nome Completo</label>
                     </div>
                     <div class="form-floating" style="margin-top: 10px;">
                         <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
                         <label for="floatingInput">E-mail</label>
                     </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="date" class="form-control" id="floatingInput" name="nascimento" placeholder="name@example.com">
+                        <label for="floatingInput">Data de nascimento</label>
+                    </div>
+                    
+                    <div class="input-group mb-3" style="height: 55px; margin-top: 10px;">
+                        <label class="input-group-text" for="inputGroupSelect01">Gênero</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                    
                     <div class="form-floating" style="margin-top: 10px;">
                         <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Password">
                         <label for="floatingPassword">Senha</label>

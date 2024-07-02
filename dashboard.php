@@ -23,7 +23,7 @@ foreach ($results as $usuario) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">

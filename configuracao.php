@@ -23,7 +23,7 @@ foreach ($results as $usuario) {
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -31,7 +31,7 @@ foreach ($results as $usuario) {
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard | Painel</title>
+    <title>Dashboard | Configuração</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
