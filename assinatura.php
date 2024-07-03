@@ -94,7 +94,7 @@
                     
                     <div class="col-12">
                         <label for="nome" class="form-label">Nome completo <span class="text-muted"></span></label>
-                        <input type="text" class="form-control" id="nome" placeholder="nome completo">
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="nome completo">
                         <div class="invalid-feedback">
                             Please enter a valid email address for shipping updates.
                         </div>
@@ -102,7 +102,7 @@
 
                     <div class="col-12">
                         <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-                        <input type="email" class="form-control" id="email" placeholder="voce@example.com">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="voce@example.com">
                         <div class="invalid-feedback">
                             Please enter a valid email address for shipping updates.
                         </div>
@@ -110,7 +110,7 @@
 
                     <div class="col-md-6">
                         <label for="country" class="form-label">Gênero</label>
-                        <select class="form-select" id="country" required>
+                        <select class="form-select" name="sexo" id="country" required>
                             <option value="m">masculino</option>
                             <option value="f">feminino</option>
                         </select>
@@ -121,7 +121,7 @@
 
                     <div class="col-sm-6">
                         <label for="lastName" class="form-label">Nascimento</label>
-                        <input type="date" class="form-control" id="lastName" placeholder="" value="" required>
+                        <input type="date" class="form-control" id="lastName" placeholder="" name="nascimento" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -129,7 +129,7 @@
 
                     <div class="col-12">
                         <label for="logradouro" class="form-label">Logradouro</label>
-                        <input type="text" class="form-control" id="logradouro" placeholder="endereço" required>
+                        <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="endereço" required>
                         <div class="invalid-feedback">
                             Please enter your shipping address.
                         </div>
@@ -137,7 +137,7 @@
 
                     <div class="col-sm-10">
                         <label for="bairro" class="form-label">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" placeholder="bairro" value="" required>
+                        <input type="text" class="form-control" id="bairro" placeholder="bairro" name="bairro" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -145,7 +145,7 @@
 
                     <div class="col-sm-2">
                         <label for="numero" class="form-label">Número</label>
-                        <input type="text" class="form-control" id="numero" placeholder="" value="" required>
+                        <input type="text" class="form-control" id="numero" placeholder="" name="numero" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -153,7 +153,7 @@
 
                     <div class="col-sm-4">
                         <label for="numero" class="form-label">Estado</label>
-                        <input type="text" class="form-control" id="numero" placeholder="estado" value="" required>
+                        <input type="text" class="form-control" id="numero" placeholder="estado" name="estado" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -161,7 +161,7 @@
 
                     <div class="col-sm-4">
                         <label for="numero" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="numero" placeholder="cidade" value="" required>
+                        <input type="text" class="form-control" id="numero" placeholder="cidade" name="cidade" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -169,7 +169,7 @@
 
                     <div class="col-sm-4">
                         <label for="numero" class="form-label">CEP</label>
-                        <input type="text" class="form-control" id="numero" placeholder="" name="" required>
+                        <input type="text" class="form-control" id="numero" placeholder="" name="cep" required>
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -196,7 +196,7 @@
                 <hr class="my-4">
 
                 <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <input type="checkbox" class="form-check-input" name="termos" id="same-address">
                     <label class="form-check-label" for="same-address">Concordo com os termos deste serviço.</label>
                 </div>
 
