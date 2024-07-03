@@ -56,11 +56,11 @@
         </svg>
 
         <div class="container" style="width: 70%; margin: 0px 15% 0px 15%;">
-        <header>
+        <header style="margin-top: 20px;">
             <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
             <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-                <span class="fs-4">Pricing example</span>
+                <span class="fs-4">Clube Idearte</span>
             </a>
 
             <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
@@ -183,9 +183,9 @@
                     </div>
                 </div> -->
 
-                <p class="fs-5 text-muted">Um palco de experiências inesquecíveis por:</p>
+                <p class="fs-5 text-muted" style="margin-left: -30px;">Um palco de experiências inesquecíveis por:</p>
 
-                <div class="col">
+                <div class="col" style="margin-left: -30px;">
                     <div class="card mb-4 rounded-3 shadow-sm" style="margin-top: 5%;">
                     <div class="card-header py-3">
                         <h4 class="my-0 fw-normal">Assinatura</h4>
@@ -203,64 +203,83 @@
                     </div>
                     </div>
                 </div>
-            
             </div>
 
-            <div class="table-responsive" style="display: none;">
-            <table class="table text-center">
-                <thead>
-                <tr>
-                    <th style="width: 34%;"></th>
-                    <th style="width: 22%;"></th>
-                    <th style="width: 22%;"></th>
-                    <th style="width: 22%;">Clube Idearte</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row" class="text-start">Entrada exclusiva</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Encontro e foto com ídolo</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Pré-venda online de ingressos</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Kit exclusivo</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Desconto especiais</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Sorteios e promoções</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                <tr>
-                    <th scope="row" class="text-start">Atendimento personalizado</th>
-                    <td></td>
-                    <td></td>
-                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-                </tr>
-                </tbody>
-            </table>
+            <h2 class="display-6 text-center mb-4" style="margin-top: 50px;">Dúvidas Frequentes</h2>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Como faço para me associar?
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Para se tornar membro do Clube IDEARTE basta clicar no botão SEJA SÓCIO para realizar o procedimento de cadastro. Durante o cadastro você estará de acordo com o pagamento mensal de R$ 19,90 (dezenove reais e noventa centavos), que será descontado do seu cartão de crédito, e com a fidelização de 12 (doze) meses, período em que você não poderá cancelar sua contratação sem o pagamento de multa no valor de R$ 150,00 (cento e cinquenta reais). Também poderá efetuar o valor total de 214,02 (já incluso desconto de 10% à vista) via PIX ou cartão de débito. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Quanto tempo depois do cadastro tenho acesso aos benefícios?
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Após realizar o cadastro no Clube IDEARTE, e com a aprovação do pagamento, você já pode utilizar todos os benefícios disponíveis no nosso clube. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Como utilizar o desconto de ingressos?
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Para compra de ingressos com desconto do Clube IDEARTE, primeiramente verifique se o evento conta com desconto do Clube. A compra de ingressos pode ser realizada através dos canais oficiais de venda (site ou bilheteria), mediante a informação do CPF no ato da compra. O desconto não é acumulativo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                    Os ingressos são nominais? Posso repassar o meu ingresso? Terceiros terão acesso aos benefícios?
+                    </button>
+                    </h2>
+                    <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Os ingressos não são nominais e podem ser encaminhados para terceiros. O nome impresso é apenas uma personalização e não tem real valor. Terceiros poderão entrar no evento com o ingresso ligado ao benefício do Clube IDEARTE, porém, não terão acesso aos outros benefícios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    A entrada premium é liberada em todas as casas/teatros e eventos?
+                    </button>
+                    </h2>
+                    <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>A entrada premium estará disponível em todas as casas, teatros e eventos realizados pela Idearte Produções.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                    Como faço para cancelar o Clube IDEARTE?
+                    </button>
+                    </h2>
+                    <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>O sócio possui até 07 dias para desistência do plano após a assinatura ou em caso de roubo/furto do cartão. Este cancelamento só será possível se não for utilizado nenhum dos benefícios. Além disso, caso após o período de 12 (doze) meses de fidelização da assinatura, o sócio não quiser mais utilizar os benefícios do Clube IDEARTE, ele poderá solicitar o cancelamento. Porém, como já esclarecido, antes de findar o prazo de 12 (doze) meses, o sócio não poderá cancelar sua contratação sem o pagamento de multa no valor de R$ 150,00 (cento e cinquenta reais). Para mais informações, confira o regulamento completo.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
