@@ -89,179 +89,195 @@
             </div>
             <div class="col-md-7 col-lg-8">
                 <h4 class="mb-3">Cadastre-se</h4>
-                <form class="needs-validation" novalidate>
-                <div class="row g-3">
-                    
-                    <div class="col-12">
-                        <label for="nome" class="form-label">Nome completo <span class="text-muted"></span></label>
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="nome completo">
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
+                <form class="needs-validation" method="post" action="php/cadastro.php" novalidate>
+                    <div class="row g-3">
+                        
+                        <div class="col-12">
+                            <label for="nome" class="form-label">Nome completo <span class="text-muted"></span></label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="nome completo">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
                         </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email <span class="text-muted"></span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="voce@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" placeholder="" name="telefone" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="" name="cpf" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="country" class="form-label">Gênero</label>
+                            <select class="form-select" name="sexo" id="country" required>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Nascimento</label>
+                            <input type="date" class="form-control" id="lastName" placeholder="" name="nascimento" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="logradouro" class="form-label">Logradouro</label>
+                            <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="endereço" required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <label for="bairro" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" id="bairro" placeholder="bairro" name="bairro" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="numero" class="form-label">Número</label>
+                            <input type="text" class="form-control" id="numero" placeholder="" name="numero" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="estado" class="form-label">Estado</label>
+                            <input type="text" class="form-control" id="estado" placeholder="estado" name="estado" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cidade" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" placeholder="cidade" name="cidade" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="cep" placeholder="" name="cep" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="" name="senha" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="conf_senha" class="form-label">Confirmar</label>
+                            <input type="password" class="form-control" id="conf_senha" placeholder="" name="conf_senha" required>
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="col-12">
-                        <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="voce@example.com">
-                        <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
-                        </div>
-                    </div>
+                    <hr class="my-4">
 
-                    <div class="col-md-6">
-                        <label for="country" class="form-label">Gênero</label>
-                        <select class="form-select" name="sexo" id="country" required>
-                            <option value="m">masculino</option>
-                            <option value="f">feminino</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid country.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Nascimento</label>
-                        <input type="date" class="form-control" id="lastName" placeholder="" name="nascimento" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="logradouro" class="form-label">Logradouro</label>
-                        <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="endereço" required>
-                        <div class="invalid-feedback">
-                            Please enter your shipping address.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-10">
-                        <label for="bairro" class="form-label">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" placeholder="bairro" name="bairro" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <label for="numero" class="form-label">Número</label>
-                        <input type="text" class="form-control" id="numero" placeholder="" name="numero" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label for="numero" class="form-label">Estado</label>
-                        <input type="text" class="form-control" id="numero" placeholder="estado" name="estado" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label for="numero" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="numero" placeholder="cidade" name="cidade" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <label for="numero" class="form-label">CEP</label>
-                        <input type="text" class="form-control" id="numero" placeholder="" name="cep" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="" name="senha" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <label for="conf_senha" class="form-label">Confirmar</label>
-                        <input type="password" class="form-control" id="conf_senha" placeholder="" name="conf_senha" required>
-                        <div class="invalid-feedback">
-                            Valid last name is required.
-                        </div>
-                    </div>
-
-                </div>
-
-                <hr class="my-4">
-
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="termos" id="same-address">
-                    <label class="form-check-label" for="same-address">Concordo com os termos deste serviço.</label>
-                </div>
-
-                <div class="form-check" style="display:none;">
-                    <input type="checkbox" class="form-check-input" id="save-info">
-                    <label class="form-check-label" for="save-info">Save this information for next time</label>
-                </div>
-
-                <hr class="my-4">
-
-                <h4 class="mb-3">Payment</h4>
-
-                <div class="my-3">
                     <div class="form-check">
-                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-                    <label class="form-check-label" for="credit">Credit card</label>
-                    </div>
-                    <div class="form-check">
-                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="debit">Debit card</label>
-                    </div>
-                    <div class="form-check">
-                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="paypal">PayPal</label>
-                    </div>
-                </div>
-
-                <div class="row gy-3">
-                    <div class="col-md-6">
-                    <label for="cc-name" class="form-label">Name on card</label>
-                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                    <small class="text-muted">Full name as displayed on card</small>
-                    <div class="invalid-feedback">
-                        Name on card is required
-                    </div>
+                        <input type="checkbox" class="form-check-input" name="termos" id="same-address">
+                        <label class="form-check-label" for="same-address">Concordo com os termos deste serviço.</label>
                     </div>
 
-                    <div class="col-md-6">
-                    <label for="cc-number" class="form-label">Credit card number</label>
-                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Credit card number is required
-                    </div>
+                    <div class="form-check" style="display:none;">
+                        <input type="checkbox" class="form-check-input" id="save-info">
+                        <label class="form-check-label" for="save-info">Save this information for next time</label>
                     </div>
 
-                    <div class="col-md-3">
-                    <label for="cc-expiration" class="form-label">Expiration</label>
-                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Expiration date required
-                    </div>
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Payment</h4>
+
+                    <div class="my-3">
+                        <div class="form-check">
+                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                        <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                        <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
                     </div>
 
-                    <div class="col-md-3">
-                    <label for="cc-cvv" class="form-label">CVV</label>
-                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Security code required
-                    </div>
-                    </div>
-                </div>
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                        <label for="cc-name" class="form-label">Name on card</label>
+                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                        <small class="text-muted">Full name as displayed on card</small>
+                        <div class="invalid-feedback">
+                            Name on card is required
+                        </div>
+                        </div>
 
-                <hr class="my-4">
+                        <div class="col-md-6">
+                        <label for="cc-number" class="form-label">Credit card number</label>
+                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Credit card number is required
+                        </div>
+                        </div>
 
-                <button class="w-100 btn btn-primary btn-lg" type="submit">Concluir Assinatura</button>
+                        <div class="col-md-3">
+                        <label for="cc-expiration" class="form-label">Expiration</label>
+                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Expiration date required
+                        </div>
+                        </div>
+
+                        <div class="col-md-3">
+                        <label for="cc-cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Security code required
+                        </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Concluir Assinatura</button>
                 </form>
             </div>
             </div>

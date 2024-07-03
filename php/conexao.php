@@ -1,7 +1,7 @@
 <?php
 
 $hostname = '127.0.0.1';
-$dbname   = 'dashboard';
+$dbname   = 'idearte';
 $username = 'root';
 $password = 'Mysql2023@root';
 

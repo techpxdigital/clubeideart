@@ -17,10 +17,17 @@ $stmt->execute();
 $results = $stmt->fetchAll();
 
 foreach ($results as $usuario) {
-    $hash      = $usuario['senha'];
-    $nome      = $usuario['nome'];
-    $sobrenome = $usuario['sobrenome'];
-    $email     = $usuario['email'];
+    $hash       = $usuario['senha'];
+    $nome       = $usuario['nome'];
+    $email      = $usuario['email'];
+    $telefone   = $usuario['telefone'];
+    $logradouro = $usuario['logradouro'];
+    $bairro     = $usuario['bairro'];
+    $estado     = $usuario['estado'];
+    $cidade     = $usuario['cidade'];
+    $cep        = $usuario['cep'];
+    $numero     = $usuario['numero'];
+    $cpf        = $usuario['cpf'];
 }
 
 // VERIFICAR SENHA
@@ -33,11 +40,11 @@ if ($hash === md5($atual_senha)) {
         ':nome' => md5($nome),
     ));
 
-    // HASH SOBRENOME
-    $stmt = $conn->prepare('UPDATE usuarios SET sobrenome = :sobrenome WHERE id = :id');
+    // HASH TELEFONE
+    $stmt = $conn->prepare('UPDATE usuarios SET telefone = :telefone WHERE id = :id');
     $stmt->execute(array(
-        ':id'        => $is_user,
-        ':sobrenome' => md5($sobrenome),
+        ':id'       => $is_user,
+        ':telefone' => md5($telefone),
     ));
 
     // HASH EMAIL
@@ -45,6 +52,55 @@ if ($hash === md5($atual_senha)) {
     $stmt->execute(array(
         ':id'    => $is_user,
         ':email' => md5($email),
+    ));
+
+    // HASH LOGRADOURO
+    $stmt = $conn->prepare('UPDATE usuarios SET logradouro = :logradouro WHERE id = :id');
+    $stmt->execute(array(
+        ':id'         => $is_user,
+        ':logradouro' => md5($logradouro),
+    ));
+
+    // HASH BAIRRO
+    $stmt = $conn->prepare('UPDATE usuarios SET bairro = :bairro WHERE id = :id');
+    $stmt->execute(array(
+        ':id'     => $is_user,
+        ':bairro' => md5($bairro),
+    ));
+
+    // HASH ESTADO
+    $stmt = $conn->prepare('UPDATE usuarios SET estado = :estado WHERE id = :id');
+    $stmt->execute(array(
+        ':id'     => $is_user,
+        ':estado' => md5($estado),
+    ));
+
+    // HASH CIDADE
+    $stmt = $conn->prepare('UPDATE usuarios SET cidade = :cidade WHERE id = :id');
+    $stmt->execute(array(
+        ':id'     => $is_user,
+        ':cidade' => md5($cidade),
+    ));
+
+    // HASH CEP
+    $stmt = $conn->prepare('UPDATE usuarios SET cep = :cep WHERE id = :id');
+    $stmt->execute(array(
+        ':id'  => $is_user,
+        ':cep' => md5($cep),
+    ));
+
+    // HASH NÚMERO
+    $stmt = $conn->prepare('UPDATE usuarios SET numero = :numero WHERE id = :id');
+    $stmt->execute(array(
+        ':id'     => $is_user,
+        ':numero' => md5($numero),
+    ));
+
+    // HASH CPF
+    $stmt = $conn->prepare('UPDATE usuarios SET cpf = :cpf WHERE id = :id');
+    $stmt->execute(array(
+        ':id'  => $is_user,
+        ':cpf' => md5($cpf),
     ));
 
     // ATUALIZAR STATUS
