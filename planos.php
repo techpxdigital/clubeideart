@@ -72,7 +72,7 @@
             </div>
 
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal">Clube Idearte</h1>
+            <h1 class="display-4 fw-normal"><b>Clube Idearte</b></h1>
             <p class="fs-5 text-muted">Seja bem-vindo ao nosso Clube IDEARTE, onde transformamos sua vida em um palco de experiências inesquecíveis! Explore o inesquecível mundo do entretenimento e das artes conosco. Junte-se a uma comunidade exclusiva e apaixonada por experiências únicas.</p>
 
             <p class="fs-5 text-muted"></p>
