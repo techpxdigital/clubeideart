@@ -65,18 +65,18 @@
                     <h6 class="my-0">Assinatura Anual</h6>
                     <small class="text-muted">clube idearte</small>
                     </div>
-                    <span class="text-muted">$12</span>
+                    <span class="text-muted">R$19,90/mês</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between bg-light">
                     <div class="text-success">
                     <h6 class="my-0">Pagamento à vista</h6>
                     <small>débito ou pix</small>
                     </div>
-                    <span class="text-success">−$5</span>
+                    <span class="text-success">R$214,92</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total</span>
-                    <strong>$20</strong>
+                    <strong>R$238,80</strong>
                 </li>
                 </ul>
 
