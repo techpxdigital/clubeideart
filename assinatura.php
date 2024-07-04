@@ -87,7 +87,8 @@
                 </div>
                 </form>
 
-                <a href="api/pix.php"><button class="">Pagar com PIX</button></a>
+                <a href="api/sdk_pix.php"><button class="">Pagar com PIX</button></a>
+
             </div>
             <div class="col-md-7 col-lg-8">
                 <h4 class="mb-3">Cadastre-se</h4>
@@ -294,50 +295,6 @@
             </ul>
         </footer>
         </div>
-
-        <script>
-
-            console.log("pagamento via pix");
-
-            const url = 'https://api.mercadopago.com/v1/payments';
-            const opcoes = {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Bearer APP_USR-1925364150244385-070318-d0be4460f42281c98819ff966fb8767b-1802086025',
-                    'Cache-Control': 'no-cache',
-                    'Content-Type': 'application/json',
-                    'Accept': '*/*',
-                    'Accept-Encoding': 'gzip, deflate, br',
-                    'Connection': 'keep-alive',
-                    'X-Idempotency-Key': '0d5020ed-1af6-469c-ae06-c3bec19954bb',
-                },
-                body: JSON.stringify({
-                    "description": "Payment for product",
-                    "external_reference": "MP001",
-                    "payer": {
-                        "email": "teste_user_123@gmail.com",
-                        "identification": {
-                            "type": "CPF",
-                            "number": "09570212403"
-                        } 
-                    },
-                    "payment_method_id": "pix",
-                    "transaction_amount": 58.8
-                })
-            };
-
-            fetch(url, opcoes)
-            .then(resposta => resposta.json())
-            .then(dados => {
-                console.log(dados);
-            })
-            .catch(erro => {
-                console.error('Erro ao buscar dados:', erro);
-            });
-
-
-        </script>
-
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

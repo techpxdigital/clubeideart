@@ -34,18 +34,19 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
-echo $response;
 
-// $obj = json_decode($response);
+//echo $response;
 
-// if (isset($obj->id)) {
-//     if ($obj->id != NULL) {
+$obj = json_decode($response);
+
+if (isset($obj->id)) {
+    if ($obj->id != NULL) {
         
-//         $copia_cola   = $obj->point_of_interaction->transaction_data->qr_code;
-//         $img_qrcode   = $obj->point_of_interaction->transaction_data->qr_code_base64;
-//         $link_externo = $obj->point_of_interaction->transaction_data->ticket_url;
+        $copia_cola   = $obj->point_of_interaction->transaction_data->qr_code;
+        $img_qrcode   = $obj->point_of_interaction->transaction_data->qr_code_base64;
+        $link_externo = $obj->point_of_interaction->transaction_data->ticket_url;
 
-//         echo "<img src='data:image/png;base64, {$img_qrcode}' width='200' /><br/>";
-//         echo "<textarea>{$copia_cola}</textarea><br/>";
-//     }
-// }
+        echo "<img src='data:image/png;base64, {$img_qrcode}' width='200' /><br/>";
+        echo "<textarea>{$copia_cola}</textarea><br/>";
+    }
+}
