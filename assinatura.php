@@ -86,6 +86,8 @@
                     <button type="submit" class="btn btn-secondary">Redeem</button>
                 </div>
                 </form>
+
+                <a href="api/pix.php"><button class="">Pagar com PIX</button></a>
             </div>
             <div class="col-md-7 col-lg-8">
                 <h4 class="mb-3">Cadastre-se</h4>
