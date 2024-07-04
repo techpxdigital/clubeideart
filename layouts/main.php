@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $nome_completo = $_SESSION['usuario']['nome'];
 $explode_name  = explode(" ", $nome_completo);
@@ -29,8 +29,71 @@ $nome_usuario  = $explode_name[0];
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="dashboard.php">
                                 <span data-feather="home"></span>
-                                Painel Geral
+                                Visão Geral
                             </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="editora.php">
+                                <span data-feather="users"></span>
+                                Editora
+                            </a>
+                            <?php 
+                            
+                            if ($page === "editora") {
+                                
+                                echo '
+                                
+                                <ul style="margin-left: 20px;" class="nav flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="configuracao.php">
+                                            <span data-feather="users"></span>
+                                            Institucional
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="configuracao.php">
+                                            <span data-feather="users"></span>
+                                            Livros
+                                        </a>
+                                        <ul style="margin-left: 20px;" class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="configuracao.php">
+                                                    <span data-feather="users"></span>
+                                                    Administração e Negócios
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="configuracao.php">
+                                                    <span data-feather="users"></span>
+                                                    Literatura Brasileira
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="configuracao.php">
+                                                    <span data-feather="users"></span>
+                                                    Leitura Infantil
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="configuracao.php">
+                                                    <span data-feather="users"></span>
+                                                    Didáticos
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="configuracao.php">
+                                                    <span data-feather="users"></span>
+                                                    Autoajuda
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                ';
+                            }
+                            
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="configuracao.php">
@@ -45,7 +108,7 @@ $nome_usuario  = $explode_name[0];
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Bem-vindo <?php echo $nome_usuario ?></h1>
+                    <h1 class="h2">Olá <?php echo $nome_usuario; ?></h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
                             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -88,13 +151,16 @@ $nome_usuario  = $explode_name[0];
                 <!-- SECTION -->
                 <?php 
                 
-                if ($page == "dashboard") {
+                if ($page === "dashboard") {
                     include_once "componentes/painel.php"; 
                 }
-                if ($page == "configuracao") {
+                if ($page === "configuracao") {
                     include_once "componentes/configuracao.php"; 
                 }
-                
+                if ($page === "editora") {
+                    include_once "componentes/editora.php"; 
+                }
+
                 ?>
                 
             </main>
