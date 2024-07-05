@@ -87,7 +87,7 @@
                 </div>
                 </form>
 
-                <a href="api/api_pix.php"><button class="">Pagar com PIX</button></a>
+                <a href="api/sdk_pix.php"><button class="">Pagar com PIX</button></a>
 
             </div>
             <div class="col-md-7 col-lg-8">
