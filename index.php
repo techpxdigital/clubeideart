@@ -91,14 +91,14 @@
                     <br><button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
 
                     <div class="checkbox mb-3" style="margin-top: 20px;">
-                        <a href="cadastro.php"><p>Cadastre-se</p></a>
+                        <a href="assinatura.php"><button type="button" class="btn btn-secondary btn-lg" style="width: 100%;">Assine Já</button></a>
                     </div>
 
                     <div class="checkbox mb-3" style="margin-top: 20px;">
                         <a href="recuperar.php"><p>Recuperar Acesso</p></a>
                     </div>
 
-                    <p class="mt-5 mb-3 text-muted" style="font-size: 13px;">Todos os direitos reservados &copy; 2021</p>
+                    <p class="mt-5 mb-3" style="font-size: 13px; line-height: 17px;">Todos os direitos reservados a Ideart Produções &copy; <?php echo date('Y'); ?> | Desenvolvido por TechPX Digital</p>
                 </form>
             </main>
         </div>

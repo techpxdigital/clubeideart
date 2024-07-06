@@ -1,5 +1,6 @@
 <?php
 
+// CREDENCIAIS
 $access_token = 'APP_USR-1925364150244385-070318-d0be4460f42281c98819ff966fb8767b-1802086025';
 $code_random  = random_int(100000000, 999999999);
 
@@ -15,17 +16,17 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'POST',
   CURLOPT_POSTFIELDS => '{
-    "description": "Payment for product",
-    "external_reference": "MP001",
+    "description": "Clube Idearte",
+    "external_reference": "IP001",
     "payer": {
-        "email": "gemensonfranca@outlook.com",
+        "email": '.@$email.',
         "identification": {
             "type": "CPF",
-            "number": "09570212403"
+            "number": '.@$cpf.'
         } 
     },
     "payment_method_id": "pix",
-    "transaction_amount": 150.8
+    "transaction_amount": 214.92
 }',
   CURLOPT_HTTPHEADER => array(
     'Content-Type: application/json',
@@ -49,8 +50,8 @@ if (isset($obj->id)) {
     $img_qrcode   = $obj->point_of_interaction->transaction_data->qr_code_base64;
     $link_externo = $obj->point_of_interaction->transaction_data->ticket_url;
 
-    echo "<img src='data:image/png;base64, {$img_qrcode}' width='200' /><br/>";
-    echo "<textarea>{$copia_cola}</textarea><br/>";
+    // echo "<img src='data:image/png;base64, {$img_qrcode}' width='200' /><br/>";
+    // echo "<textarea>{$copia_cola}</textarea><br/>";
   }
 }
 
