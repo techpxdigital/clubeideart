@@ -1,5 +1,16 @@
 <?php
 
+$data   = $_GET['data'];
+$base64 = base64_decode($data);
+
+$string = explode(',', $base64);
+$inform = [
+    "nome"  => $string[0],
+    "email" => $string[1],
+    "cpf"   => $string[2],
+    "pay"   => $string[3],
+];
+
 $access_token = "TEST-1925364150244385-070318-29c4b2969650cacaa8931a659bdc1cee-1802086025";
 $code_random  = random_int(100000000, 999999999);
 
@@ -20,7 +31,7 @@ curl_setopt_array($curl, array(
         "pending": "http://test.com/pending",
         "failure": "http://test.com/failure"
     },
-    "external_reference": '.$code_random.',
+    "external_reference": ' . $code_random . ',
     "notification_url": "https://google.com",
     "auto_return": "approved",
     "items": [
@@ -36,10 +47,10 @@ curl_setopt_array($curl, array(
     ],  
     "payer": {
         "name": "John",
-        "email": '.@$email.',
+        "email": ' . @$email . ',
         "identification": {
             "type": "CPF",
-            "number": '.@$cpf.'
+            "number": ' . @$cpf . '
         } 
     },
     "payment_methods": {
@@ -60,7 +71,7 @@ curl_setopt_array($curl, array(
     }',
     CURLOPT_HTTPHEADER => array(
         'Content-Type: application/json',
-        'Authorization: Bearer '.$access_token
+        'Authorization: Bearer ' . $access_token
     ),
 ));
 
@@ -73,8 +84,18 @@ curl_close($curl);
 $obj = json_decode($response);
 
 if (isset($obj->id)) {
-  if ($obj->id != NULL) {
+    if ($obj->id != NULL) {
 
-    $link_externo = $obj->init_point;
-  }
+        $link_externo = $obj->init_point;
+    }
 }
+
+$data_base = [
+    "link" => $link_externo,
+    "pay"  => $inform['pay'],
+];
+
+$string_base = implode(",", $data_base);
+$base64      = base64_encode($string_base);
+
+header("Location: ../checkout.php?data=" . $base64);

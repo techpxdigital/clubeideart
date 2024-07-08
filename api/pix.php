@@ -1,5 +1,16 @@
 <?php
 
+$data   = $_GET['data'];
+$base64 = base64_decode($data);
+
+$string = explode(',', $base64);
+$inform = [
+  "nome"  => $string[0],
+  "email" => $string[1],
+  "cpf"   => $string[2],
+  "pay"   => $string[3],
+];
+
 // CREDENCIAIS
 $access_token = 'APP_USR-1925364150244385-070318-d0be4460f42281c98819ff966fb8767b-1802086025';
 $code_random  = random_int(100000000, 999999999);
@@ -19,10 +30,10 @@ curl_setopt_array($curl, array(
     "description": "Clube Idearte",
     "external_reference": "IP001",
     "payer": {
-        "email": '.@$email.',
+        "email": '.@$inform['email'].',
         "identification": {
             "type": "CPF",
-            "number": '.@$cpf.'
+            "number": '.@$inform['cpf'].'
         } 
     },
     "payment_method_id": "pix",
@@ -54,5 +65,15 @@ if (isset($obj->id)) {
     // echo "<textarea>{$copia_cola}</textarea><br/>";
   }
 }
+
+$data_base = [
+  "link" => $link_externo,
+  "pay"  => $inform['pay'],
+];
+
+$string_base = implode(",", $data_base);
+$base64      = base64_encode($string_base);
+
+header("Location: ../checkout.php?data=".$base64);
 
 ?>

@@ -149,7 +149,7 @@ $nome_usuario  = $explode_name[0];
                     echo "
                         <div class='alert alert-warning' role='alert'>
                             Seu e-mail ainda não foi verificado!
-                            <button type='button' style='float: right;' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Verificar Agora</button>
+                            <button type='button' style='float: right; font-size: 11px;' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Verificar Agora</button>
                         </div>
                     ";
 

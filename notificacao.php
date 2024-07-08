@@ -1,0 +1,6 @@
+<?php 
+
+$access_token = 'APP_USR-1925364150244385-070318-d0be4460f42281c98819ff966fb8767b-1802086025';
+$code_random  = random_int(100000000, 999999999);
+
+?>
