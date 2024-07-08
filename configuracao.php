@@ -61,54 +61,10 @@ foreach ($results as $usuario) {
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-  
-        function drawChart() {
-  
-          var data = google.visualization.arrayToDataTable([
-            ['Effort', 'Amount given'],
-            ['My all',     100],
-          ]);
-  
-          var options = {
-            pieHole: 0.5,
-            pieSliceTextStyle: {
-              color: 'black',
-            },
-            legend: 'none'
-          };
-  
-          var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
-          chart.draw(data, options);
-        }
-      </script>
-
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Year', 'Sales', 'Expenses'],
-            ['2013',  1000,      400],
-            ['2014',  1170,      460],
-            ['2015',  660,       1120],
-            ['2016',  1030,      540]
-        ]);
-
-        var options = {
-            title: 'Company Performance',
-            hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-            vAxis: {minValue: 0}
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <script src="js/function-mask.js"></script>
+    <script src="js/script.js"></script>
 
     <style>
         .bd-placeholder-img {
