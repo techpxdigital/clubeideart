@@ -18,6 +18,7 @@
         $formato_edt   = $livros['formato'];
 
         $resumido = mb_strimwidth($sintese_edt, 0, 40, "...");
+    }
 ?>
 
 <div class="row mb-2" style="margin-top: 20px;">
