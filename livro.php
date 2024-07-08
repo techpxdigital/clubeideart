@@ -16,21 +16,8 @@ $stmt->execute();
 $results = $stmt->fetchAll();
 
 foreach ($results as $usuario) {
-    $id_db     = $usuario['id'];
-    $nome_db   = $usuario['nome'];
-    $email_db  = $usuario['email'];
-    $senha_db  = $usuario['senha'];
-    $nasc_db   = $usuario['nascimento'];
-    $tel_db    = $usuario['telefone'];
-    $cpf_db    = $usuario['cpf'];
-    $rua_db    = $usuario['logradouro'];
-    $bairro_db = $usuario['bairro'];
-    $estado_db = $usuario['estado'];
-    $cidade_db = $usuario['cidade'];
-    $cep_db    = $usuario['cep'];
-    $numero_db = $usuario['numero'];
-    $valid_db  = $usuario['validar'];
-    $stts_db   = $usuario['stts'];
+    $valid_db = $usuario['validar'];
+    $stts_db  = $usuario['stts'];
 }
 
 ?>
@@ -44,7 +31,7 @@ foreach ($results as $usuario) {
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Dashboard | Configuração</title>
+    <title>Clube Idearte | Editora</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -126,10 +113,6 @@ foreach ($results as $usuario) {
             border-radius: 5px;
             font-size: 14px;
         }
-        main.config{
-            width: 100%;
-            height: 100vh;
-        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -147,7 +130,7 @@ foreach ($results as $usuario) {
     <!-- SECTION -->
     <?php 
 
-    $page = "configuracao";
+    $page    = "titulo";
     
     include_once "layouts/main.php"; 
     

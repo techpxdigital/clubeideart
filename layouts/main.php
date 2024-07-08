@@ -13,7 +13,7 @@ $nome_usuario  = $explode_name[0];
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Busque na editora" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
                 <a class="nav-link px-3" href="php/logout.php">Sign out</a>
@@ -38,69 +38,89 @@ $nome_usuario  = $explode_name[0];
                                 Editora
                             </a>
                             <?php 
+
+                            // RECUPERAR VALIDAÇÃO
+                            $stmt = $conn->prepare('SELECT * FROM categorias');
+                            $stmt->execute();
+                            $results = $stmt->fetchAll();
                             
-                            if ($page === "editora") {
+                            if ($page === "editora" OR $page === "titulo") {
+
+                                if ($_SESSION['usuario']['tipo'] === "usuario") {
+                                    
+                                    echo '
                                 
-                                echo '
-                                
-                                <ul style="margin-left: 20px;" class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="configuracao.php">
-                                            <span data-feather="users"></span>
-                                            Institucional
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="configuracao.php">
-                                            <span data-feather="users"></span>
-                                            Livros
-                                        </a>
-                                        <ul style="margin-left: 20px;" class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="configuracao.php">
-                                                    <span data-feather="users"></span>
-                                                    Administração e Negócios
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="configuracao.php">
-                                                    <span data-feather="users"></span>
-                                                    Literatura Brasileira
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="configuracao.php">
-                                                    <span data-feather="users"></span>
-                                                    Leitura Infantil
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="configuracao.php">
-                                                    <span data-feather="users"></span>
-                                                    Didáticos
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="configuracao.php">
-                                                    <span data-feather="users"></span>
-                                                    Autoajuda
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                
-                                ';
+                                    <ul style="margin-left: 20px;" class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="configuracao.php">
+                                                <span data-feather="users"></span>
+                                                Institucional
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="configuracao.php">
+                                                <span data-feather="users"></span>
+                                                Livros
+                                            </a>
+                                            <ul style="margin-left: 20px;" class="nav flex-column">';
+
+                                                foreach ($results as $categoria) {
+                                                    $categoria_nome = $categoria['categoria'];
+
+                                                    echo "
+                                                    
+                                                    <li class='nav-item'>
+                                                        <a class='nav-link' href='configuracao.php'>
+                                                            <span data-feather='users'></span>
+                                                            $categoria_nome
+                                                        </a>
+                                                    </li>
+                                                    
+                                                    ";
+                                                }
+
+                                                echo '
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    
+                                    ';
+                                }
+                                else{
+                                    echo '
+                                    <ul style="margin-left: 20px;" class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="editora.php">
+                                                <span data-feather="users"></span>
+                                                Livros
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="categorias.php">
+                                                <span data-feather="users"></span>
+                                                Categorias
+                                            </a>
+                                        </li>
+                                    </ul>';
+                                }
                             }
                             
                             ?>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="configuracao.php">
-                                <span data-feather="users"></span>
-                                Configuração
-                            </a>
-                        </li>
+
+                        <?php 
+                        
+                            if ($_SESSION['usuario']['tipo'] === "usuario") {
+                                                    
+                                echo '<li class="nav-item">
+                                    <a class="nav-link" href="configuracao.php">
+                                        <span data-feather="users"></span>
+                                        Configuração
+                                    </a>
+                                </li>';
+                            }
+                        ?>
+            
                     </ul>
                 </div>
             </nav>
@@ -124,7 +144,7 @@ $nome_usuario  = $explode_name[0];
                 <div class="row">
                 <?php
 
-                    if ($valid_db != "varificado") {
+                    if ($_SESSION['usuario']['tipo'] === "usuario" AND $valid_db != "varificado") {
 
                     echo "
                         <div class='alert alert-warning' role='alert'>
@@ -152,13 +172,31 @@ $nome_usuario  = $explode_name[0];
                 <?php 
                 
                 if ($page === "dashboard") {
-                    include_once "componentes/painel.php"; 
+
+                    if ($_SESSION['usuario']['tipo'] === "usuario") {
+                        include_once "componentes/painel.php";
+                    }
+                    else{
+                        include_once "componentes/admin_lista.php";
+                    }  
                 }
                 if ($page === "configuracao") {
                     include_once "componentes/configuracao.php"; 
                 }
                 if ($page === "editora") {
-                    include_once "componentes/editora.php"; 
+
+                    if ($_SESSION['usuario']['tipo'] === "usuario") {
+                        include_once "componentes/editora.php";
+                    }
+                    else{
+                        include_once "componentes/admin_livros.php";
+                    }  
+                }
+                if ($page === "categorias") {
+                    include_once "componentes/admin_categorias.php";
+                }
+                if ($page === "titulo") {
+                    include_once "componentes/titulo.php"; 
                 }
 
                 ?>

@@ -9,15 +9,18 @@ if (!isset($_SESSION['usuario'])) {
 // CONEXÃO COM BANCO MYSQL
 include_once "php/conexao.php";
 
-// RECUPERAR VALIDAÇÃO
-$stmt = $conn->prepare('SELECT * FROM usuarios WHERE id = :id');
-$stmt->bindParam(':id', $_SESSION['usuario']['id']);
-$stmt->execute();  
-$results = $stmt->fetchAll();
+if ($_SESSION['usuario']['tipo'] === "usuario") {
+    
+    // RECUPERAR VALIDAÇÃO
+    $stmt = $conn->prepare('SELECT * FROM usuarios WHERE id = :id');
+    $stmt->bindParam(':id', $_SESSION['usuario']['id']);
+    $stmt->execute();  
+    $results = $stmt->fetchAll();
 
-foreach ($results as $usuario) {
-    $valid_db = $usuario['validar'];
-    $stts_db  = $usuario['stts'];
+    foreach ($results as $usuario) {
+        $valid_db = $usuario['validar'];
+        $stts_db  = $usuario['stts'];
+    }
 }
 
 ?>

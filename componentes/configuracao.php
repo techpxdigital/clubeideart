@@ -7,6 +7,30 @@
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
+                <strong class="text-gray-dark">Editar informações pessoais</strong>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal4" href="#">Editar</a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex text-muted pt-3">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                <strong class="text-gray-dark">Editar endereço</strong>
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal5" href="#">Editar</a>
+                </div>
+                <span class="d-block"><?php echo "$rua_db, $cidade_db, $estado_db"; ?></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 rounded shadow-sm" style="border: 1px solid #eeeeee;">
+        <div class="d-flex text-muted pt-3">
+            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+
+            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
                 <strong class="text-gray-dark">Alterar e-mail de acesso</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Alterar</a>
                 </div>
@@ -147,6 +171,88 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                     <button type="submit" class="btn btn-primary">Excluir definitivamente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel4"><b>Editar informações pessoais</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="php/editar_info.php" method="post">
+                <div class="modal-body">
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="nome" value="<?php echo $nome_db; ?>" placeholder="Nome">
+                        <label for="floatingPassword">Nome</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="date" class="form-control" id="floatingPassword" name="nascimento" value="<?php echo $nasc_db; ?>" placeholder="Nascimento">
+                        <label for="floatingPassword">Nascimento</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="cpf" value="<?php echo $cpf_db; ?>" placeholder="CPF">
+                        <label for="floatingPassword">CPF</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="telefone" value="<?php echo $tel_db; ?>" placeholder="Telefone">
+                        <label for="floatingPassword">Telefone</label>
+                    </div>
+                    <input type="hidden" name="id_user" value="<?php echo $id_db; ?>">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Atualizar informações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel5"><b>Editar endereço</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="php/editar_end.php" method="post">
+                <div class="modal-body">
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="logradouro" value="<?php echo $rua_db; ?>" placeholder="Logradouro">
+                        <label for="floatingPassword">Logradouro</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="bairro" value="<?php echo $bairro_db; ?>" placeholder="Bairro">
+                        <label for="floatingPassword">Bairro</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="estado" value="<?php echo $estado_db; ?>" placeholder="Estado">
+                        <label for="floatingPassword">Estado</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="cidade" value="<?php echo $cidade_db; ?>" placeholder="Cidade">
+                        <label for="floatingPassword">Cidade</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="cep" value="<?php echo $cep_db; ?>" placeholder="CEP">
+                        <label for="floatingPassword">CEP</label>
+                    </div>
+                    <div class="form-floating" style="margin-top: 10px;">
+                        <input type="text" class="form-control" id="floatingPassword" name="numero" value="<?php echo $numero_db; ?>" placeholder="Número">
+                        <label for="floatingPassword">Número</label>
+                    </div>
+                    <input type="hidden" name="id_user" value="<?php echo $id_db; ?>">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Atualizar endereço</button>
                 </div>
             </form>
         </div>
