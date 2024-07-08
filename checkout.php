@@ -44,6 +44,9 @@
 <body>
     <?php 
 
+    // CONEXÃO MYSQL
+    include_once "php/conexao.php";
+
     $data   = $_GET['data'];
     $base64 = base64_decode($data);
 
@@ -51,9 +54,25 @@
     $inform = [
         "link" => $string[0],
         "pay"  => $string[1],
+        "cpf"  => $string[2],
+        "code" => $string[3],
     ];
         
-    if (isset($link_externo) AND !empty($link_extern)) {
+    if (isset($inform['link']) AND !empty($inform['link'])) {
+
+        // GUARDAR PEDIDO
+        $stmt = $conn->prepare('INSERT INTO pedidos(pedido, usuario, valor, pagamento, stts, create_data, update_data, link_externo) VALUES(:pedido, :usuario, :valor, :pagamento, :stts, :create_data, :update_data, :link_externo)');
+        $stmt->execute(array(
+            ':pedido'       => $inform['code'],
+            ':usuario'      => $inform['cpf'],
+            ':valor'        => 238.8,
+            ':pagamento'    => $inform['pay'],
+            ':stts'         => "pending",
+            ':create_data'  => date('d-m-Y H:i:s'),
+            ':update_data'  => "",
+            ':link_externo' => $inform['link'],
+        ));
+
         echo "
         <main class='container'>
             <div class='bg-light p-5 rounded mt-3'>

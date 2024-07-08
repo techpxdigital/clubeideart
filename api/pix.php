@@ -5,10 +5,11 @@ $base64 = base64_decode($data);
 
 $string = explode(',', $base64);
 $inform = [
-  "nome"  => $string[0],
-  "email" => $string[1],
-  "cpf"   => $string[2],
-  "pay"   => $string[3],
+    "cpf"   => $string[0],
+    "nome"  => $string[1],
+    "email" => $string[2],
+    "cpf"   => $string[3],
+    "pay"   => $string[4],
 ];
 
 // CREDENCIAIS
@@ -28,7 +29,8 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'POST',
   CURLOPT_POSTFIELDS => '{
     "description": "Clube Idearte",
-    "external_reference": "IP001",
+    "external_reference": '.$code_random.',
+    "notification_url": "https://idearteproducoes.com.br/notificacao.php",
     "payer": {
         "email": '.@$inform['email'].',
         "identification": {

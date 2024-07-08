@@ -5,10 +5,11 @@ $base64 = base64_decode($data);
 
 $string = explode(',', $base64);
 $inform = [
-    "nome"  => $string[0],
-    "email" => $string[1],
-    "cpf"   => $string[2],
-    "pay"   => $string[3],
+    "cpf"   => $string[0],
+    "nome"  => $string[1],
+    "email" => $string[2],
+    "cpf"   => $string[3],
+    "pay"   => $string[4],
 ];
 
 $access_token = "TEST-1925364150244385-070318-29c4b2969650cacaa8931a659bdc1cee-1802086025";
@@ -27,12 +28,12 @@ curl_setopt_array($curl, array(
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => '{
     "back_urls": {
-        "success": "http://test.com/success",
-        "pending": "http://test.com/pending",
-        "failure": "http://test.com/failure"
+        "success": "https://idearteproducoes.com.br",
+        "pending": "https://idearteproducoes.com.br",
+        "failure": "https://idearteproducoes.com.br"
     },
     "external_reference": ' . $code_random . ',
-    "notification_url": "https://google.com",
+    "notification_url": "https://idearteproducoes.com.br/notificacao.php",
     "auto_return": "approved",
     "items": [
         {
@@ -42,7 +43,7 @@ curl_setopt_array($curl, array(
         "category_id": "assinatura",
         "quantity": 1,
         "currency_id": "BRL",
-        "unit_price": 238.80
+        "unit_price": 238.8
         }
     ],  
     "payer": {
@@ -79,8 +80,6 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 
-// echo $response;
-
 $obj = json_decode($response);
 
 if (isset($obj->id)) {
@@ -93,6 +92,8 @@ if (isset($obj->id)) {
 $data_base = [
     "link" => $link_externo,
     "pay"  => $inform['pay'],
+    "cpf"  => $inform['cpf'],
+    "code" => $code_random,
 ];
 
 $string_base = implode(",", $data_base);

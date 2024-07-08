@@ -81,6 +81,7 @@ if ($dados['senha'] === $dados['conf_senha']) {
 
     // DADOS BASE64
     $data_base = [
+        "cpf"   => $dados['cpf'],
         "nome"  => $dados['nome'],
         "email" => $dados['email'],
         "cpf"   => $dados['cpf'],
