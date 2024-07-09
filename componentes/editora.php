@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<div class="row mb-2" style="height: 100vh;">
+<div class="row mb-2" style="height: 100vhz;">
 
     <?php  
 
@@ -24,6 +24,7 @@
         $paginas_edt   = $livros['paginas'];
         $isbn_issn_edt = $livros['isbn_issn'];
         $sintese_edt   = $livros['sintese'];
+        $img_edt       = $livros['imagem'];
         $formato_edt   = $livros['formato'];
 
         $resumido = mb_strimwidth($sintese_edt, 0, 40, "...");
@@ -43,7 +44,7 @@
                     </form>
                 </div>
                 <div class='col-auto d-none d-lg-block'>
-                    <svg class='bd-placeholder-img' width='200' height='250' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Thumbnail' preserveAspectRatio='xMidYMid slice' focusable='false'><title>Placeholder</title><rect width='100%' height='100%' fill='#55595c'/><text x='50%' y='50%' fill='#eceeef' dy='.3em'>Thumbnail</text></svg>
+                    <div style='width: 200px; height: 250px; background-image: url(img/livros/$img_edt); background-size: 100%;'>.</div>
                 </div>
             </div>
         </div>
@@ -54,3 +55,7 @@
     ?>
 
 </div>
+<footer class="pt-3 mt-4 text-body-secondary border-top">
+    <small>Todos os direitos reservados a Editora Idearte &copy; <?php echo date('Y') ?></small>
+</footer>
+<div style="width: 100%; height: 20px;"></div>

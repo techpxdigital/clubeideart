@@ -83,7 +83,7 @@ foreach ($results as $usuario) {
     <!-- SECTION -->
     <?php 
 
-    $page    = "titulo";
+    $page = "institucional";
     
     include_once "layouts/main.php"; 
     

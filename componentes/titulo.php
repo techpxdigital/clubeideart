@@ -15,9 +15,13 @@
         $paginas_edt   = $livros['paginas'];
         $isbn_issn_edt = $livros['isbn_issn'];
         $sintese_edt   = $livros['sintese'];
+        $img_edt       = $livros['imagem'];
         $formato_edt   = $livros['formato'];
+        $valor_edt     = $livros['valor'];
+        $link_edt      = $livros['link'];
 
         $resumido = mb_strimwidth($sintese_edt, 0, 40, "...");
+        $preco    = number_format($valor_edt,2,",",".");
     }
 ?>
 
@@ -51,15 +55,19 @@
                 <strong class="d-inline-block mb-2 text-primary"><?php echo $categoria_edt ?></strong>
                 <h3 class="mb-0"><?php echo $titulo_edt ?></h3>
                 <div class="mb-1 text-muted"><?php echo $autor_edt ?></div>
-                <div class="mb-1 text-muted">R$123,00</div>
-                <button type="button" class="btn btn-primary btn-lg" style="margin-top: 30px; width: 100%;">Compre agora</button>
+                <div class="mb-1 text-muted">R$<?php echo $preco ?></div>
+                <a href="<?php echo $link_edt ?>" target="_blank"><button type="button" class="btn btn-primary btn-lg" style="margin-top: 30px; width: 100%;">Compre agora</button></a>
             </div>
             <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                </svg>
+                <div class='col-auto d-none d-lg-block'>
+                    <div style='width: 200px; height: 250px; background-image: url(img/livros/<?php echo $img_edt ?>); background-size: 100%;'>.</div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<footer class="pt-3 mt-4 text-body-secondary border-top">
+    <small>Todos os direitos reservados a Editora Idearte &copy; <?php echo date('Y') ?></small>
+</footer>
+<div style="width: 100%; height: 20px;"></div>

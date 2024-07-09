@@ -40,6 +40,8 @@
                     $isbn_issn_edt = $livros['isbn_issn'];
                     $sintese_edt   = $livros['sintese'];
                     $formato_edt   = $livros['formato'];
+                    $valor_edt     = $livros['valor'];
+                    $link_edt      = $livros['link'];
 
                     echo "
                     
@@ -66,7 +68,7 @@
                                     <h1 class'modal-title fs-5' id='exampleModalLabel$id_edt' style='font-size: 20px;'><b>$titulo_edt</b></h1>
                                     <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                                 </div>
-                                <form action='' method='post'>
+                                <form action='php/editar_livro.php' method='post' enctype='multipart/form-data'>
                                 <div class='modal-body'>
                                     <div class='form-floating' style='margin-top: 10px;'>
                                         <input type='text' class='form-control' id='floatingPassword' name='titulo' value='$titulo_edt' placeholder='Títilo'>
@@ -80,12 +82,9 @@
                                         <input type='text' class='form-control' id='floatingPassword' name='editora' value='$editora_edt' placeholder='Editora'>
                                         <label for='floatingPassword'>Editora</label>
                                     </div>
-                                    <div class='input-group mb-3' style='height: 55px; margin-top: 10px;'>
-                                        <label class='input-group-text' for='inputGroupSelect01'>Categoria</label>
-                                        <select class='form-select' id='inputGroupSelect01' name='categoria'>
-                                            <option value='masculino'>Masculino</option>
-                                            <option value='feminino'>Feminino</option>
-                                        </select>
+                                    <div class='form-floating' style='margin-top: 10px;'>
+                                        <input type='text' class='form-control' disabled id='floatingPassword' name='categoria' value='$categoria_edt' placeholder='Categoria'>
+                                        <label for='floatingPassword'>Categoria</label>
                                     </div>
                                     <div class='form-floating' style='margin-top: 10px;'>
                                         <input type='text' class='form-control' id='floatingPassword' name='ano' value='$ano_edt' placeholder='Ano lançamento'>
@@ -103,18 +102,27 @@
                                         <textarea class='form-control' name='sintese' placeholder='Leave a comment here' id='floatingTextarea2' style='height: 100px'>$sintese_edt</textarea>
                                         <label for='floatingTextarea2'>Síntese</label>
                                     </div>
-                                    <div>
-                                        <label for='formFileLg' class='form-label'>Imagem</label>
-                                        <input class='form-control form-control-lg' id='formFileLg' type='file'>
+                                    <div class='mb-3' style='margin-top: 10px;'>
+                                        <label for='formFile' class='form-label'>Imagem</label>
+                                        <input class='form-control' name='imagem' type='file' id='formFile'>
                                     </div>
                                     <div class='form-floating' style='margin-top: 10px;'>
                                         <input type='text' class='form-control' id='floatingPassword' name='formato' value='$formato_edt' placeholder='Formato'>
                                         <label for='floatingPassword'>Formato</label>
                                     </div>
+                                    <div class='form-floating' style='margin-top: 10px;'>
+                                        <input type='text' class='form-control' id='floatingPassword' name='valor' value='$valor_edt' placeholder='Preço'>
+                                        <label for='floatingPassword'>Preço</label>
+                                    </div>
+                                    <div class='form-floating' style='margin-top: 10px;'>
+                                        <input type='text' class='form-control' id='floatingPassword' name='link' value='$link_edt' placeholder='Link'>
+                                        <label for='floatingPassword'>Link de venda</label>
+                                    </div>
                                 </div>
+                                <input type='hidden' value='$id_edt' name='id_livro'>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                                    <button type='button' class='btn btn-primary'>Editar</button>
+                                    <button type='submit' class='btn btn-primary'>Editar</button>
                                 </div>
                                 </form>
                             </div>
@@ -216,6 +224,14 @@
                 <div class='form-floating' style='margin-top: 10px;'>
                     <input type='text' class='form-control' id='floatingPassword' name='formato' placeholder='Formato'>
                     <label for='floatingPassword'>Formato</label>
+                </div>
+                <div class='form-floating' style='margin-top: 10px;'>
+                    <input type='text' class='form-control' id='floatingPassword' name='valor' placeholder='Preço'>
+                    <label for='floatingPassword'>Preço</label>
+                </div>
+                <div class='form-floating' style='margin-top: 10px;'>
+                    <input type='text' class='form-control' id='floatingPassword' name='link' placeholder='Link'>
+                    <label for='floatingPassword'>Link de venda</label>
                 </div>
             </div>
             <div class="modal-footer">

@@ -103,3 +103,8 @@ else{
 }
 
 ?>
+
+<footer class="pt-3 mt-4 text-body-secondary border-top">
+    <small>Todos os direitos reservados a Idearte Produção &copy; <?php echo date('Y') ?></small>
+</footer>
+<div style="width: 100%; height: 20px;"></div>

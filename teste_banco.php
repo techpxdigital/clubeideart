@@ -1,5 +1,8 @@
 <?php
 
+// https://ideartepay.000webhostapp.com/api/pix.php
+// https://ideartepay.000webhostapp.com/api/card.php
+
 $hostname = '127.0.0.1';
 $dbname   = 'ideartep_clube';
 $username = 'ideartep_produc';

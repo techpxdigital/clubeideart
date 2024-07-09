@@ -14,9 +14,38 @@ $nome_usuario  = $explode_name[0];
         <span class="navbar-toggler-icon"></span>
     </button>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Busque na editora" aria-label="Search">
-    <div class="navbar-nav">
-        <div class="nav-item text-nowrap">
-            <a class="nav-link px-3" href="php/logout.php">Sair</a>
+    <div class="navbar-nav" style="width: 25%;">
+        <div class="nav-item text-nowrap" style="padding-left: 45px;">
+            <?php 
+            
+            $stmt = $conn->prepare('SELECT * FROM pedidos WHERE usuario = :cpf');
+            $stmt->bindParam(':cpf', $_SESSION['usuario']['cpf']);
+            $stmt->execute();  
+            $results = $stmt->fetchAll();
+
+            foreach ($results as $pagamento) {
+                $stts_pay = $pagamento['stts'];
+            }
+
+            if (isset($stts_pay) AND !empty($stts_pay) AND $stts_pay === 'approved') {
+
+                echo '
+                
+                <small style="color: green; position: absolute; margin: 10px 0px 0px 0px;"><i class="fi fi-br-crown" style="margin: 0px 0px 0px -25px; position: absolute; font-size: 16px;"></i> Assinatura Ativa</small>
+                <a class="nav-link px-3" style="float: right;" href="php/logout.php">Sair</a>
+                
+                ';
+            }
+            else{
+                echo '
+                
+                <small style="color: orange; position: absolute; margin: 10px 0px 0px 0px;"><i class="fi fi-br-crown" style="margin: 0px 0px 0px -25px; position: absolute; font-size: 16px;"></i> Assinatura Pendente</small>
+                <a class="nav-link px-3" style="float: right;" href="php/logout.php">Sair</a>
+                
+                ';
+            }
+            
+            ?>
         </div>
     </div>
 </header>
@@ -25,7 +54,7 @@ $nome_usuario  = $explode_name[0];
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background: #212121;">
             <div class="position-sticky pt-3">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column" style="position: fixed; margin-top: 0%;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.php">
                             <i class="fi fi-br-comment-alt-check" style="position: absolute; margin-top: 3px;"></i>
@@ -52,13 +81,13 @@ $nome_usuario  = $explode_name[0];
                             
                                 <ul style="margin-left: 20px;" class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="configuracao.php">
+                                        <a class="nav-link" href="institucional.php">
                                             <i class="fi fi-br-building" style="position: absolute; margin-top: 3px;"></i>
                                             <span style="margin-left: 30px;">Institucional</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="configuracao.php">
+                                        <a class="nav-link" href="editora.php">
                                             <i class="fi fi-br-book-alt" style="position: absolute; margin-top: 3px;"></i>
                                             <span style="margin-left: 30px;">Livros</span> 
                                         </a>
@@ -67,16 +96,26 @@ $nome_usuario  = $explode_name[0];
                                             foreach ($results as $categoria) {
                                                 $categoria_nome = $categoria['categoria'];
 
-                                                echo "
+                                                // RECUPERAR LIVROS
+                                                $stmt = $conn->prepare('SELECT * FROM livros WHERE categoria = :nome');
+                                                $stmt->bindParam(':nome', $categoria_nome);
+                                                $stmt->execute();  
+                                                $results = $stmt->fetchAll();
+                                                $count   = count($results);
+
+                                                if ($count > 0) {
+
+                                                    echo "
                                                 
-                                                <li class='nav-item'>
-                                                    <a class='nav-link' href='configuracao.php'>
-                                                        <i class='fi fi-br-add' style='position: absolute; margin-top: 3px;'></i>
-                                                        <span style='margin-left: 30px;'>$categoria_nome</span> 
-                                                    </a>
-                                                </li>
-                                                
-                                                ";
+                                                    <li class='nav-item'>
+                                                        <a class='nav-link' href='configuracao.php'>
+                                                            <i class='fi fi-br-add' style='position: absolute; margin-top: 3px;'></i>
+                                                            <span style='margin-left: 30px;'>$categoria_nome ($count)</span> 
+                                                        </a>
+                                                    </li>
+                                                    
+                                                    ";
+                                                }
                                             }
 
                                             echo '
@@ -190,6 +229,9 @@ $nome_usuario  = $explode_name[0];
                 else{
                     include_once "componentes/admin_livros.php";
                 }  
+            }
+            if ($page === "institucional") {
+                include_once "componentes/instituto.php";
             }
             if ($page === "categorias") {
                 include_once "componentes/admin_categorias.php";

@@ -15,7 +15,9 @@ $dados = [
     "paginas"   => $_POST['paginas'],
     "isbn_issn" => $_POST['isbn_issn'],
     "sintese"   => $_POST['sintese'],
-    "formato"   => $_POST['formato']
+    "formato"   => $_POST['formato'],
+    "valor"     => $_POST['valor'],
+    "link"      => $_POST['link'],
 ];
 
 foreach ($dados as $input) {
@@ -38,7 +40,7 @@ if(!empty($_FILES['imagem']['name'])) {
 	$nome_img1 = $new_name1;
 
     // REGISTRAR INFORMAÇÕES NO BANCO
-    $stmt = $conn->prepare('INSERT INTO livros(titulo, autor, editora, categoria, ano, paginas, isbn_issn, sintese, imagem, formato) VALUES(:titulo, :autor, :editora, :categoria, :ano, :paginas, :isbn_issn, :sintese, :imagem, :formato)');
+    $stmt = $conn->prepare('INSERT INTO livros(titulo, autor, editora, categoria, ano, paginas, isbn_issn, sintese, imagem, formato, valor, link) VALUES(:titulo, :autor, :editora, :categoria, :ano, :paginas, :isbn_issn, :sintese, :imagem, :formato, :valor, :link)');
     $stmt->execute(array(
         ':titulo'    => $dados['titulo'],
         ':autor'     => $dados['autor'],
@@ -49,7 +51,9 @@ if(!empty($_FILES['imagem']['name'])) {
         ':isbn_issn' => $dados['isbn_issn'],
         ':sintese'   => $dados['sintese'],
         ':imagem'    => $nome_img1,
-        ':formato'   => $dados['formato']
+        ':formato'   => $dados['formato'],
+        ':valor'     => $dados['valor'],
+        ':link'      => $dados['link'],
     ));
 
     $_SESSION['flash_success'] = "Livro adicionado com sucesso!";
