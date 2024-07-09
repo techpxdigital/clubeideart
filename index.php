@@ -31,6 +31,9 @@
             -moz-user-select: none;
             user-select: none;
         }
+        .col-4{
+            padding: 0px;
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -44,14 +47,14 @@
     <link href="signin.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body class="text-center" style="background-color: #000000;">
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
             <main class="form-signin" style="padding: 0px 40px">
                 <form action="php/login.php" method="post" class="card-body p-12" style="margin-top: 8%;">
-                    <img src="img/configuracoes.gif" style="width: 100px;" alt="logo">
-                    <h1 class="h3 mb-3" style="font-weight: bold;">Dashboard BI</h1>
+                    <img src="img/Logoidearte.png" style="width: 180px;" alt="logo">
+                    <!-- <h1 class="h3 mb-3" style="font-weight: bold; color: #ffffff;">Clube Idearte</h1> -->
 
                     <?php
 
@@ -79,7 +82,7 @@
 
                     ?>
         
-                    <div class="form-floating" style="margin-top: 20%;">
+                    <div class="form-floating" style="margin-top: 10%;">
                         <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
                         <label for="floatingInput">E-mail</label>
                     </div>
@@ -98,7 +101,7 @@
                         <a href="recuperar.php"><p>Recuperar Acesso</p></a>
                     </div>
 
-                    <p class="mt-5 mb-3" style="font-size: 13px; line-height: 17px;">Todos os direitos reservados a Ideart Produções &copy; <?php echo date('Y'); ?> | Desenvolvido por TechPX Digital</p>
+                    <p class="mt-5 mb-3" style="font-size: 13px; line-height: 17px; color: #fafafa;">Todos os direitos reservados a Ideart Produções &copy; <?php echo date('Y'); ?> | Desenvolvido por TechPX Digital</p>
                 </form>
             </main>
         </div>

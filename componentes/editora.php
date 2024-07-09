@@ -5,7 +5,7 @@
     </div>
 </div>
 
-<div class="row mb-2">
+<div class="row mb-2" style="height: 100vh;">
 
     <?php  
 

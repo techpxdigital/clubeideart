@@ -3,60 +3,60 @@
 
     <div class="my-3 p-3 rounded shadow-sm" style="border: 1px solid #eeeeee;">
         <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <i class="fi fi-br-user-pen" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
-                <strong class="text-gray-dark">Editar informações pessoais</strong>
+                <strong class="text-gray-dark" style="margin-left: 40px;">Editar informações pessoais</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal4" href="#">Editar</a>
                 </div>
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <i class="fi fi-br-house-building" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
 
-            <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-                <div class="d-flex justify-content-between">
-                <strong class="text-gray-dark">Editar endereço</strong>
+            <div class="pb-3 mb-0 small lh-sm  w-100">
+                <div class="d-flex justify-content-between" >
+                <strong class="text-gray-dark" style="margin-left: 40px;">Editar endereço</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal5" href="#">Editar</a>
                 </div>
-                <span class="d-block"><?php echo "$rua_db, $cidade_db, $estado_db"; ?></span>
+                <span class="d-block" style="margin-left: 40px;"><?php echo "$rua_db, $cidade_db, $estado_db"; ?></span>
             </div>
         </div>
     </div>
 
     <div class="my-3 p-3 rounded shadow-sm" style="border: 1px solid #eeeeee;">
         <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <i class="fi fi-br-at" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
-                <strong class="text-gray-dark">Alterar e-mail de acesso</strong>
+                <strong class="text-gray-dark" style="margin-left: 40px;">Alterar e-mail de acesso</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Alterar</a>
                 </div>
-                <span class="d-block"><?php echo $_SESSION['usuario']['email'] ?></span>
+                <span class="d-block" style="margin-left: 40px;"><?php echo $_SESSION['usuario']['email'] ?></span>
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <i class="fi fi-br-lock" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
-                <strong class="text-gray-dark">Alterar senha de acesso</strong>
+                <strong class="text-gray-dark" style="margin-left: 40px;">Alterar senha de acesso</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal1" href="#">Alterar</a>
                 </div>
-                <span class="d-block">**********</span>
+                <span class="d-block" style="margin-left: 40px;">**********</span>
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+            <i class="fi fi-br-cross-circle" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
-                <strong class="text-gray-dark">Cancelar assinatura</strong>
+                <strong class="text-gray-dark" style="margin-left: 40px;">Cancelar assinatura</strong>
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal2" href="#">Cancelar</a>
                 </div>
-                <span class="d-block">Próxima cobrança em 19/03/2024</span>
+                <span class="d-block" style="margin-left: 40px;">Sem informação de cobrança</span>
             </div>
         </div>
         <small class="d-block text-end mt-3">
