@@ -1,16 +1,12 @@
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="height: 350px;">
-    <div class="col-md-6 px-0">
-        <h1 class="display-4 fst-italic"><b>Viaje em Páginas</b></h1>
-        <p class="lead my-3">Aprenda, divirta-se, emocione-se, sorria, apaixone-se, mergulhe e surpreenda-se”.</p>
-    </div>
-</div>
-
 <div class="row mb-2" style="height: 100vh;">
 
     <?php  
 
+    $categoria = $_GET['categoria'];
+
     // RECUPERAR VALIDAÇÃO
-    $stmt = $conn->prepare('SELECT * FROM livros');
+    $stmt = $conn->prepare('SELECT * FROM livros WHERE categoria = :categoria');
+    $stmt->bindParam(':categoria', $categoria);
     $stmt->execute();
     $results = $stmt->fetchAll();
 

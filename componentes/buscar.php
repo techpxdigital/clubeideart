@@ -1,18 +1,21 @@
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="height: 350px;">
-    <div class="col-md-6 px-0">
-        <h1 class="display-4 fst-italic"><b>Viaje em Páginas</b></h1>
-        <p class="lead my-3">Aprenda, divirta-se, emocione-se, sorria, apaixone-se, mergulhe e surpreenda-se”.</p>
-    </div>
-</div>
-
 <div class="row mb-2" style="height: 100vh;">
 
     <?php  
 
-    // RECUPERAR VALIDAÇÃO
-    $stmt = $conn->prepare('SELECT * FROM livros');
-    $stmt->execute();
+    $busca = $_POST['pesquisa'];
+
+    $termSearch = '%'.$busca.'%';
+    $query = "SELECT liv.id, liv.*, cat.*, (SELECT COUNT(*) FROM livros) AS count_gal
+            FROM livros AS liv
+            LEFT JOIN categorias AS cat ON liv.categoria = cat.id
+            WHERE liv.categoria <> '' AND (liv.titulo LIKE :termSearch OR liv.autor LIKE :termSearch)
+            AND liv.categoria IS NOT NULL
+            ORDER BY liv.id DESC;";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":termSearch", $termSearch, PDO::PARAM_STR);
+    $stmt->execute();  
     $results = $stmt->fetchAll();
+
 
     foreach ($results as $livros) {
         $id_edt        = $livros['id'];

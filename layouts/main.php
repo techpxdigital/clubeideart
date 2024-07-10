@@ -13,7 +13,9 @@ $nome_usuario  = $explode_name[0];
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Busque na editora" aria-label="Search">
+    <form class="w-100" action="busca.php" method="post">
+    <input class="form-control form-control-dark" type="text" name="pesquisa" placeholder="Busque na editora" aria-label="Search">
+    </form>
     <div class="navbar-nav" style="width: 25%;">
         <div class="nav-item text-nowrap" style="padding-left: 45px;">
             <?php 
@@ -73,7 +75,7 @@ $nome_usuario  = $explode_name[0];
                         $stmt->execute();
                         $results = $stmt->fetchAll();
                         
-                        if ($page === "editora" OR $page === "titulo") {
+                        if ($page === "editora" OR $page === "titulo" OR $page === "categoria_livros" OR $page === "buscar") {
 
                             if ($_SESSION['usuario']['tipo'] === "usuario") {
                                 
@@ -108,7 +110,7 @@ $nome_usuario  = $explode_name[0];
                                                     echo "
                                                 
                                                     <li class='nav-item'>
-                                                        <a class='nav-link' href='configuracao.php'>
+                                                        <a class='nav-link' href='variedade.php?categoria=$categoria_nome'>
                                                             <i class='fi fi-br-add' style='position: absolute; margin-top: 3px;'></i>
                                                             <span style='margin-left: 30px;'>$categoria_nome ($count)</span> 
                                                         </a>
@@ -232,6 +234,12 @@ $nome_usuario  = $explode_name[0];
             }
             if ($page === "institucional") {
                 include_once "componentes/instituto.php";
+            }
+            if ($page === "categoria_livros") {
+                include_once "componentes/categoria.php";
+            }
+            if ($page === "buscar") {
+                include_once "componentes/buscar.php";
             }
             if ($page === "categorias") {
                 include_once "componentes/admin_categorias.php";
