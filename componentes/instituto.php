@@ -1,6 +1,6 @@
 <main>
     <div class="px-4 py-1 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+        <img class="d-block mx-auto mb-4" src="img/editora_idearte.jpg" alt="" width="120px">
         <h1 class="display-5 fw-bold text-body-emphasis">Editora Ideate</h1>
         <div class="col-lg-12 mx-auto">
             <p class="lead mb-4" style="line-height: 24px; margin-top: 30px;">A Editora Idearte é um selo lançado em 2021 com o propósito de tornar acessíveis publicações de livros que, em outras circunstâncias, dificilmente chegariam aos leitores.</p>
@@ -13,14 +13,11 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Amaury Jr. CEO Editora Idearte</h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <h2 class="featurette-heading fw-normal lh-1">Amaury Veríssimo Jr.</h2>
+            <p class="lead">CEO Editora Idearte</p>
         </div>
         <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="var(--bs-secondary-bg)" /><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-            </svg>
+            <div style="width: 500px; height: 500px; background-image: url(img/ceo.jpg); background-size: 100%;"></div>
         </div>
     </div>
     <footer class="pt-3 mt-4 text-body-secondary border-top">

@@ -1,328 +1,489 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-        <meta name="generator" content="Hugo 0.84.0">
-        <title>Pricing example · Bootstrap v5.0</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idearte Produções</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo_clube.css">
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet">
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/pricing/">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.2/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JAVASCRIPT -->
+	<script  src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <script src="js/javascript.js"></script>
+</head>
 
-        
+<style>
+    body{
+        font-family: "Montserrat", sans-serif; 
+    }
+</style>
 
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-        <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-        <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-        <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-        <meta name="theme-color" content="#7952b3">
-
-
-        <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-            }
-        }
-        </style>
-
-        
-        <!-- Custom styles for this template -->
-        <link href="pricing.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="check" viewBox="0 0 16 16">
-            <title>Check</title>
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-        </symbol>
-        </svg>
-
-        <div class="container" style="width: 70%; margin: 0px 15% 0px 15%;">
-        <header style="margin-top: 20px;">
-            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-                <span class="fs-4">Clube Idearte</span>
-            </a>
-
-            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Features</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Enterprise</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
-                <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
-            </nav>
+<!-- CORPO -->
+<body>
+    <header style="background-color: #000000;">
+        <!--  -->
+        <div class="menu_flutuante" id="box_log" style="display: none;">
+            <ul id="mob_menu">
+                <a href="/#quem_somos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Quem somos</li></a>
+                <a href="#servicos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Serviços</li></a>
+                <a href="#eventos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Eventos</li></a>
+                <a href="#clientes"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Clientes</li></a>
+                <a href="#contato"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Contato</li></a>
+                <a href="https://linktr.ee/idearte2022" target="_blank"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Ingressos</li></a>
+            </ul>
+        </div>
+        <!--  -->
+        <div id="topo" style="width: 90%; margin: 0px 5% 0px 5%; display: inline-block; background-color: #000000;">
+            <!-- LOGO -->
+            <div id="logo" class="col_logo">
+                <a href="index.html"><img style="width: 150px; margin-top: -25px; margin-left: -10px;" src="img/Logoidearte.PNG" alt="Idearte"></a>
             </div>
+            <!-- MENU PRINCIPAL -->
+            <div id="menu_p" class="col_menu">
 
-            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4 fw-normal"><b>Clube Idearte</b></h1>
-            <p class="fs-5 text-muted">Seja bem-vindo ao nosso Clube IDEARTE, onde transformamos sua vida em um palco de experiências inesquecíveis! Explore o inesquecível mundo do entretenimento e das artes conosco. Junte-se a uma comunidade exclusiva e apaixonada por experiências únicas.</p>
-
-            <p class="fs-5 text-muted"></p>
+                <ul class="lista_menu">
+                    <a href="#quem_somos"><li>Quem somos</li></a>
+                    <a href="#servicos"><li >Serviços</li></a>
+                    <a href="#eventos"><li >Eventos</li></a>
+                    <a href="#clientes"><li >Clientes</li></a>
+                    <a href="#contato"><li >Contato</li></a>
+                    <a href="https://linktr.ee/idearte2022" target="_blank"><li>Ingressos</li></a>
+                </ul>
             </div>
-        </header>
+            <!-- NAVEGADOR -->
+            <div id="navegate" class="col_nav1">
+                <a href="https://www.instagram.com/idearteproducoes/" target="_blank"><button id="bt_insta" class="button_insta1"><img id="logo_ist" class="img_insta_bt" src="img/instagram.png" alt=""> siga no instagram</button></a>
+            </div>
+            <div id="navegate" class="col_nav2">
+                <i id="button_hamburg" data-bs-toggle="modal" data-bs-target="#exampleModal" class="fi fi-br-menu-burger"></i>
+                <a href="login.php"><button class="bt_login">Login</button></a>
+                <a href="assinatura.php"><button class="bt_socio" style="background-color: #6e18a0;">Seja sócio</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- TOPO -->
+    <header class="fundo_principal1">
+        <!-- BLOCO1 -->
+        <div id="bloco1">
+            <!-- LADOA -->
+            <div id="ladoa">
+                <!-- <img class="w-[90%] mt-[40px]" src="img/texto_principal.png" alt=""> -->
+                <p class="subtitulo">Seja bem vindo ao</p>
+                <p class="titulomaster">Clube<b>Idearte.</b></p>
+            </div>
+            <!-- LADOB -->
+            <div id="ladob"></div>
+        </div>
+    </header>
 
-        <main>
-        
-            <h2 class="display-6 text-center mb-4" style="margin-top: 50px;">Idearte Experience</h2>
+
+    <!-- FAIXA -->
+    <section>
+        <div id="faixa">
+            <center>
+                <div class="faixa_col"></div>
+                <p class="text_faixa">Um palco de experiências pra você <br>por apenas R$19,90 (mensais)</p>
+                <a href="assinatura.php"><button class="bt_faixa" style="border: 0px;">QUERO FAZER PARTE</button></a>
+           </center>
+        </div>
+    </section>
 
 
-            <div class="container px-4 py-5" id="featured-3">
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>ENTRADA PREMIUM</b></h2>
-                        <p>Acesso aos eventos por uma entrada exclusiva e antecipada, livre de filas e esperas.</p>
-                        
+    <!--  -->
+    <section>
+        <div class="fundo_colors">
+            <div class="faixa_col"></div>
+            <p class="titulo_bloco">VANTAGENS</p>
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/DESCONTOS.svg" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_transparent"></div>
+
+            <div class="base_text_vantagem" >
+                <div class="col_vantagens_bloco1">
+                    <center>
+                    <p class="text_left_col">Descontos especiais<br>(50%)</p>
+                    </center>
+                </div>
+                <div class="col_vantagens_bloco2">
+                    <p class="text_itens_col"><b>AO VIVO:</b> Desfrute de performances ao vivo de artistas renomados e descubra novos talentos em diversos gêneros musicais e teatrais. (até 50%, a depender do espetáculo)</p>
+                    <p class="text_itens_col"><b>EVENTOS CULTURAIS:</b> Participe de projetos especiais e eventos culturais, peças de teatro, danças e outras manifestações culturais enriquecedoras. (até 50%, a depender do evento cultural)</p>
+                    <p class="text_itens_col"><b>FESTIVAIS TEMÁTICOS:</b> Explore festivais de teatro, cinema, música e mais, mergulhando em atmosferas únicas e cheias de energia. (até 50%, a depender do festival) </p>
+                    <p class="text_itens_col"><b>NATAL COMEDY CLUB:</b> Aproveite uma seleção dos melhores comediantes do cenário atual, garantindo uma experiência única de entretenimento e riso. (50% em todos os espetáculos do NATCC).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/ENTRADA PREMIUM.svg" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 20px;">Entrada <br>Premium</p>
+                        </center>
                     </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>ENCONTRO E FOTO COM O ÍDOLO*</b></h2>
-                        <p>Tenha um momento único e inesquecível com seu ídolo, registrado por um fotógrafo profissional.</p>
-                        
-                    </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>PRÉ-VENDA ON-LINE DE INGRESSOS</b></h2>
-                        <p>Destinada para shows em grandes arenas, podendo variar de acordo com o local e capacidade de lotação do evento.</p>
-                        
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col">Acesso aos eventos por uma entrada exclusiva e antecipada, livre de filas e esperas.</p>
                     </div>
                 </div>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>KIT EXCLUSIVO</b></h2>
-                        <p>Receba um kit especial com uma ecobag, um crachá de identificação, copo 3D e boné exclusivos do clube IDEARTE.</p>
-                        
+            </div>
+        </div>
+    </section>
+
+
+     <!--  -->
+     <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/FOTO COM IDOLO.svg" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 50px;">Encontro e Foto <br>com seu ídolo</p>
+                        </center>
                     </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>EVENTOS CULTURAIS</b></h2>
-                        <p>Participe de projetos especiais e eventos culturais, peças de teatro, danças e outras manifestações culturais enriquecedoras.</p>
-                        
-                    </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>FESTIVAIS TEMÁTICOS</b></h2>
-                        <p>Explore festivais de teatro, cinema, música e mais, mergulhando em atmosferas únicas e cheias de energia. (até 50%, a depender do festival).</p>
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col">Tenha um momento único e inesquecível com seu ídolo, registrado por um fotógrafo profissional.</p>
+                        <p class="text_itens_col" style="font-size: 12px;"><b>OBSERVAÇÃO:</b> Os encontros com os artistas atenderão às disposições contratuais com cada produção, podendo haver seleção de membros do Clube via concursos culturais.</p>
                     </div>
                 </div>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>NATAL COMEDY CLUB</b></h2>
-                        <p>Aproveite uma seleção dos melhores comediantes do cenário atual, garantindo uma experiência única de entretenimento e riso. (50% em todos os espetáculos do NCC).</p>
-                        
+            </div>
+        </div>
+    </section>
+
+
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/PRE VENDA.svg" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 20px;">Pré-venda on-line <br>de ingressos</p>
+                        </center>
                     </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>SORTEIOS</b></h2>
-                        <p>SORTEIOS: Ganhe ingressos VIP e outros prêmios incríveis nos exclusivos sorteios do clube IDEARTE</p>
-                        
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col">Destinada para shows em grandes arenas, podendo variar de acordo com o local e capacidade de lotação do evento.</p>
                     </div>
-                    <div class="feature col">
-                        <div class="feature-icon bg-primary bg-gradient" style="width: 20%;">
-                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
-                        </div>
-                        <h2 style="font-size: 18px; margin-top: 20px;"><b>PROMOÇÕES</b></h2>
-                        <p>O assinante do Clube IDEARTE tem descontos especiais em produtos e serviços dos nossos parceiros. No Natal Comedy Club o assinante terá desconto de 10% no valor final da comanda de consumo. 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/PROMOCOES.svg" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 20px;">Sorteios <br>e promoções</p>
+                        </center>
+                    </div>
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col">Ganhe ingressos VIP e outros prêmios incríveis nos exclusivos sorteios do Clube IDEARTE: CONCURSOS CULTURAIS; SORTEIOS EXCLUSIVOS DE INGRESSOS; SORTEIOS DE PRÊMIOS;</p>
+                        <p class="text_itens_col">O assinante do Clube IDEARTE tem descontos especiais em produtos e serviços dos nossos parceiros. No Natal Comedy Club o assinante terá desconto de 10% no valor final da comanda de consumo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/ATENDIMENTO PERSONALIZADO.png" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 55px;">Atendimento <br>Personalizado</p>
+                        </center>
+                    </div>
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col"><b>EQUIPE DEDICADA:</b> Nossa equipe está pronta para esclarecer dúvidas e fornecer recomendações personalizadas.</p>
+                        <p class="text_itens_col"><b>EXPERIÊNCIA INESQUECÍVEL:</b> Garanta suporte para tornar cada momento no Clube IDEARTE verdadeiramente memorável.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+
+            <div class="icone_bloco" style="background: linear-gradient(90deg, rgba(21,9,130,1) 0%, rgba(194,39,198,1) 83%);">
+                <center>
+                <img src="img/KIT EXCLUSIVO.png" class="img_icone_bloco" alt="">
+                </center>
+            </div>
+            
+            <div class="bloco_colorido">
+                <div class="w-[100%] inline-block">
+                    <div class="col_vantagens_bloco1">
+                        <center>
+                        <p class="text_left_col" style="margin-top: 50px;">KIT <br>Exclusivo</p>
+                        </center>
+                    </div>
+                    <div class="col_vantagens_bloco2" style="margin-top: 10px;">
+                        <p class="text_itens_col">Receba um kit especial com uma ecobag, um crachá de identificação, um copo e um boné exclusivos do Clube IDEARTE.
                         </p>
+                        <p class="text_itens_col">(Para os 100 primeiros assinantes do Clube.)</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row row-cols-1 row-cols-md-1 mb-3 text-center" style="width: 45%; margin: 0px 30% 0px 30%;">
-                <!-- <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Plano Mensal</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$19,90<small class="text-muted fw-light">/mo</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                        <li>10 users included</li>
-                        <li>2 GB of storage</li>
-                        <li>Email support</li>
-                        <li>Help center access</li>
-                        </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-                    </div>
-                    </div>
-                </div> -->
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+            <center>
+                <p style="font-size: 12px; color: #ffffff; margin: 0px; padding: 0px;">* Todos os benefícios podem variar de acordo com o local, a capacidade de lotação do evento e a disponibilidade do artista.</p>
+            </center>
+        </div>
+    </section>
 
-                <p class="fs-5 text-muted" style="margin-left: -30px;">Um palco de experiências inesquecíveis por:</p>
+    <!--  -->
+    <section>
+        <div style="background-color: #000000;" class="base_bloco_vantagens">
+            <div style="width: 100%; height: 20px;"></div>
+            <center>
+            <p class="titulo_bloco">PLANO DE ASSINATURA</p>
+            </center>
+            <div style="width: 100%; height: 20px;"></div>
 
-                <div class="col" style="margin-left: -30px;">
-                    <div class="card mb-4 rounded-3 shadow-sm" style="margin-top: 5%;">
-                    <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">Assinatura</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">R$19,90*<small class="text-muted fw-light">/mês</small></h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Assine por 12 meses</li>
-                            <li>Pagamentos no cartão ou PIX</li>
-                            <li>Desconto de 10% em pagamentos a vista</li>
-                        </ul>
-                        <div style="width: 90%; margin: 0px 5% 0px 5%;">
-                        <p style="font-size: 12px; margin-top: 20px; line-height: 12px;">*Todos os benefícios podem variar de acordo com o local, a capacidade de lotação do evento e a disponibilidade do artista.</p></div>
-                        <button type="button" class="w-100 btn btn-lg btn-primary">Assine Já</button>
-                    </div>
+            <div class="div_valor_base" style="margin: 40px 0px;">
+                <div class="ladob_valor" style="width: 100%; padding: 0px 0%;">
+                    <div style="width: 100%; display: inline-block">
+                        <div class="box_pagamento1">
+                            <center>
+                            <p style="font-size: 30px; margin-top: -15px; font-weight: bold;">MENSAL</p>
+                            <p style="font-size: 40px; margin-top: -15px; font-weight: bold;">R$19,90</p>
+                            <p style="font-size: 20px; margin-top: -15px;">Total: R$ 238,80</p>
+                            <p style="font-size: 16px; margin-top: -15px; font-weight: bold;">Pagamento via cartão de crédito</p>
+                            <a href="assinatura.php"><button class="bt_faixa">ASSINAR AGORA</button></a>
+                            </center>
+                        </div>
+                        <div class="box_pagamento2">
+                            <center>
+                            <p style="font-size: 30px; margin-top: -15px; font-weight: bold;">ANUAL</p>
+                            <p style="font-size: 40px; margin-top: -15px; font-weight: bold;"><s>R$ 19,90</s></p>
+                            <p style="font-size: 20px; margin-top: -15px;">Total com 10% de desconto: R$214,92</p>
+                            <p style="font-size: 16px; margin-top: -15px; font-weight: bold;">Pagamento via pix ou cartão de débito</p>
+                            <a href="assinatura.php"><button class="bt_faixa">ASSINAR AGORA</button></a>
+                            </center>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <h2 class="display-6 text-center mb-4" style="margin-top: 50px;">Dúvidas Frequentes</h2>
+        </div>
+    </section>
+    
+    <!--  -->
+    <section>
+        <div style="width: 100%; padding: 0px 5%; background-color: #000000;">
+            <div style="width: 100%; height: 20px;"></div>
+            <center>
+            <p class="titulo_bloco">DÚVIDAS FREQUENTES</p>
+            </center>
+            <div style="width: 100%; height: 20px;"></div>
 
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #ffffff; color: #000000;">
                     Como faço para me associar?
                     </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Para se tornar membro do Clube IDEARTE basta clicar no botão SEJA SÓCIO para realizar o procedimento de cadastro. Durante o cadastro você estará de acordo com o pagamento mensal de R$ 19,90 (dezenove reais e noventa centavos), que será descontado do seu cartão de crédito, e com a fidelização de 12 (doze) meses, período em que você não poderá cancelar sua contratação sem o pagamento de multa no valor de R$ 150,00 (cento e cinquenta reais). Também poderá efetuar o valor total de 214,02 (já incluso desconto de 10% à vista) via PIX ou cartão de débito. </p>
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
+                            <p>Para se tornar membro do Clube IDEARTE basta clicar no botão SEJA SÓCIO e seguir com o procedimento de cadastro. A partir disso você estará de acordo com o pagamento mensais de R$ 19,90 descontados do seu cartão de crédito, e com a fidelização de 12 meses. Nesse período você não poderá cancelar sua assinatura sem o pagamento de multa no valor de R$ 150,00.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #ffffff; color: #000000;">
                     Quanto tempo depois do cadastro tenho acesso aos benefícios?
                     </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
                             <p>Após realizar o cadastro no Clube IDEARTE, e com a aprovação do pagamento, você já pode utilizar todos os benefícios disponíveis no nosso clube. </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #ffffff; color: #000000;">
                     Como utilizar o desconto de ingressos?
                     </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
                             <p>Para compra de ingressos com desconto do Clube IDEARTE, primeiramente verifique se o evento conta com desconto do Clube. A compra de ingressos pode ser realizada através dos canais oficiais de venda (site ou bilheteria), mediante a informação do CPF no ato da compra. O desconto não é acumulativo.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1" style="background-color: #ffffff; color: #000000;">
                     Os ingressos são nominais? Posso repassar o meu ingresso? Terceiros terão acesso aos benefícios?
                     </button>
                     </h2>
                     <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Os ingressos não são nominais e podem ser encaminhados para terceiros. O nome impresso é apenas uma personalização e não tem real valor. Terceiros poderão entrar no evento com o ingresso ligado ao benefício do Clube IDEARTE, porém, não terão acesso aos outros benefícios.</p>
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
+                            <p>Os ingressos são nominais e instransferiveis, assim como os demais benefícios do Clube.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2" style="background-color: #ffffff; color: #000000;">
                     A entrada premium é liberada em todas as casas/teatros e eventos?
                     </button>
                     </h2>
                     <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
                             <p>A entrada premium estará disponível em todas as casas, teatros e eventos realizados pela Idearte Produções.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3" style="background-color: #ffffff; color: #000000;">
                     Como faço para cancelar o Clube IDEARTE?
                     </button>
                     </h2>
                     <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>O sócio possui até 07 dias para desistência do plano após a assinatura ou em caso de roubo/furto do cartão. Este cancelamento só será possível se não for utilizado nenhum dos benefícios. Além disso, caso após o período de 12 (doze) meses de fidelização da assinatura, o sócio não quiser mais utilizar os benefícios do Clube IDEARTE, ele poderá solicitar o cancelamento. Porém, como já esclarecido, antes de findar o prazo de 12 (doze) meses, o sócio não poderá cancelar sua contratação sem o pagamento de multa no valor de R$ 150,00 (cento e cinquenta reais). Para mais informações, confira o regulamento completo.</p>
+                        <div class="accordion-body" style="background-color: #000000; color: #ffffff;">
+                            <p>O sócio possui até 07 dias para desistência do plano após assinatura ou em caso de roubo/furto do cartão, desde que nenhum dos benefícios tenha sido utilizado. Após esse prazo o cancelamento só poderá ser realizado mediante pagamento de multa no valor de R$ 150,00.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row">
-            <div class="col-12 col-md">
-                <img class="mb-2" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-                <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
-                </ul>
-            </div>
-            </div>
-        </footer>
+            <div style="width: 100%; height: 100px;"></div>
         </div>
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    </body>
+    <!-- FOOTER -->
+    <footer style="background-color: #000000; width: 100%; display: insline-block;">
+        <div class="bloco_footer">
+            <!-- BLOCO -->
+            <div style="width: 100%; height: 150px; display: inline-block;">
+                <!-- BLOCOx1 -->
+                <div id="logo_f" class="w-[12%] mx-[2.5%] float-left">
+                    <!-- IMAGEM -->
+                    <a href="index.html"><img style="width: 150px; color: #ffffff; margin-top: -20px;" src="img/Logoidearte.PNG" alt="Idearte"></a>
+                </div>
+                <!-- BLOCOx2 -->
+                <div id="foot" class="footer1 w-[25%] mx-[2.5%] float-left">
+                    <!-- EENDEREÇO -->
+                    <P style="font-size: 12px; margin-top: -10px; color: #ffffff; margin-top: 20px;">◉ Av. Salgado Filho, 3510</P>
+                    <P style="font-size: 12px; margin-top: -10px; color: #ffffff;">Cnadelária, Natal-RN</P>
+                    <P style="font-size: 12px; margin-top: -10px; color: #ffffff;">CEP 59066-800</P>
+                </div>
+                <!-- BLOCOx3 -->
+                <div id="foot" class="footer1 w-[25%] mx-[2.5%] float-left">
+                    <!-- CONTATO -->
+                    <ul class="lista_footer">
+                        <li><p>◉ contato@idearteproducoes.com.br</p></li>
+                        <!-- <li><p class="mt-[3px]">◉ Whatsapp: (84) 9604-5528</p></li> -->
+                        <li><p>◉ Whatsapp: (84) 99414-0366</p></li>
+                    </ul>
+                </div>
+                <!-- BLOCOx4 -->
+                <div id="foot" class="footer2">
+                    <ul id="ul_rede" class="lista_rede">
+                        <li><a href="https://api.whatsapp.com/send?phone=5584994902293" target="_blank"><img src="img/whatsapp.png" alt="instagram"></a></li>
+                        <li><a href="https://www.instagram.com/idearteproducoes/" target="_blank"><img src="img/instagram-free-icon-font.png" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/idearteproducoesnatal" target="_blank"><img src="img/facebook-free-icon-font.png" alt="facebook"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCq9oK7BAlBTHwVErVEvTfgQ" target="_blank"><img src="img/youtube-free-icon-font.png" alt="youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="mob_menu">
+                    <a href="/#quem_somos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Quem somos</li></a>
+                    <a href="#servicos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Serviços</li></a>
+                    <a href="#eventos"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Eventos</li></a>
+                    <a href="#clientes"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Clientes</li></a>
+                    <a href="#contato"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Contato</li></a>
+                    <a href="https://linktr.ee/idearte2022" target="_blank"><li class="mb-[15px] text-[12px] text-[#ffffff] uppercase">Ingressos</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
 </html>

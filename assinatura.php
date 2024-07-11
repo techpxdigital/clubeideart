@@ -52,9 +52,9 @@
 
         <main>
             <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <img src="img/Logoidearte.png" style="width: 180px;" alt="logo">
             <h2><b>Clube Idearte</b></h2>
-            <p class="lead" style="line-height: 24px;">Seja bem-vindo ao nosso Clube IDEARTE, onde transformamos sua vida em um palco de experiências inesquecíveis! Explore o inesquecível mundo do entretenimento e das artes conosco. Junte-se a uma comunidade exclusiva e apaixonada por experiências únicas.</p>
+            <!-- <p class="lead" style="line-height: 24px;">Seja bem-vindo ao nosso Clube IDEARTE, onde transformamos sua vida em um palco de experiências inesquecíveis! Explore o inesquecível mundo do entretenimento e das artes conosco. Junte-se a uma comunidade exclusiva e apaixonada por experiências únicas.</p> -->
             </div>
 
             <?php 
@@ -76,7 +76,7 @@
             <div class="row g-5">
             <div class="col-md-5 col-lg-4 order-md-last">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-primary">Assinatura</span>
+                <span class="text-primary" style="color: #6e18a0;">Assinatura</span>
                 </h4>
                 <ul class="list-group mb-3">
 
@@ -137,7 +137,7 @@
                     <label class="form-check-label" id="link_card" style="cursor: pointer;" for="credit">Cartão de crédito (12X sem juros)</label>
                     </div>
 
-                    <div class="form-check">
+                    <div class="form-check" style="display: none;">
                     <input id="debits" name="paymentMethod" type="radio" value="2" class="form-check-input" id="card1_radio" required>
                     <label class="form-check-label" id="link_debit" style="cursor: pointer;" for="debits">Cartão de débito (10% de desconto)</label>
                     </div>
@@ -192,7 +192,7 @@
 
                 <hr class="my-4">
 
-                <button class="w-100 btn btn-primary btn-lg" type="submit">Concluir Assinatura</button>
+                <button class="w-100 btn btn-primary btn-lg" style="background-color: #6e18a0; border: #6e18a0;" type="submit">Concluir Assinatura</button>
 
                 <!-- <a href="api/sdk_pix.php"><button class="">Pagar com PIX</button></a> -->
 

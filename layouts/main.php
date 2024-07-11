@@ -54,19 +54,19 @@ $nome_usuario  = $explode_name[0];
 
 <div class="container-fluid">
     <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background: #212121;">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background: #6e18a0;">
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column" style="position: fixed; margin-top: 0%;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.php">
-                            <i class="fi fi-br-comment-alt-check" style="position: absolute; margin-top: 3px;"></i>
-                            <span style="margin-left: 30px;">Visão Geral</span>
+                            <i class="fi fi-br-comment-alt-check" style="position: absolute; margin-top: 3px; color: #ffffff;"></i>
+                            <span style="margin-left: 30px; color: #ffffff;">Visão Geral</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="editora.php">
-                        <i class="fi fi-br-book-alt" style="position: absolute; margin-top: 3px;"></i>
-                            <span style="margin-left: 30px;">Editora</span>
+                        <i class="fi fi-br-book-alt" style="position: absolute; margin-top: 3px; color: #ffffff;"></i>
+                            <span style="margin-left: 30px; color: #ffffff;">Editora</span>
                         </a>
                         <?php 
 
@@ -84,14 +84,14 @@ $nome_usuario  = $explode_name[0];
                                 <ul style="margin-left: 20px;" class="nav flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link" href="institucional.php">
-                                            <i class="fi fi-br-building" style="position: absolute; margin-top: 3px;"></i>
-                                            <span style="margin-left: 30px;">Institucional</span>
+                                            <i class="fi fi-br-building" style="position: absolute; margin-top: 3px; color: #ffffff;"></i>
+                                            <span style="margin-left: 30px; color: #ffffff;">Institucional</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="editora.php">
-                                            <i class="fi fi-br-book-alt" style="position: absolute; margin-top: 3px;"></i>
-                                            <span style="margin-left: 30px;">Livros</span> 
+                                            <i class="fi fi-br-book-alt" style="position: absolute; margin-top: 3px; color: #ffffff;"></i>
+                                            <span style="margin-left: 30px; color: #ffffff;">Livros</span> 
                                         </a>
                                         <ul style="margin-left: 20px;" class="nav flex-column">';
 
@@ -111,8 +111,8 @@ $nome_usuario  = $explode_name[0];
                                                 
                                                     <li class='nav-item'>
                                                         <a class='nav-link' href='variedade.php?categoria=$categoria_nome'>
-                                                            <i class='fi fi-br-add' style='position: absolute; margin-top: 3px;'></i>
-                                                            <span style='margin-left: 30px;'>$categoria_nome ($count)</span> 
+                                                            <i class='fi fi-br-add' style='position: absolute; margin-top: 3px; color: #ffffff;'></i>
+                                                            <span style='margin-left: 30px; color: #ffffff;'>$categoria_nome ($count)</span> 
                                                         </a>
                                                     </li>
                                                     
@@ -155,8 +155,8 @@ $nome_usuario  = $explode_name[0];
                                                 
                             echo '<li class="nav-item">
                                 <a class="nav-link" href="configuracao.php">
-                                    <i class="fi fi-br-settings-sliders" style="position: absolute; margin-top: 3px;"></i>
-                                    <span style="margin-left: 30px;">Configuração</span>
+                                    <i class="fi fi-br-settings-sliders" style="position: absolute; margin-top: 3px; color: #ffffff;"></i> 
+                                    <span style="margin-left: 30px; color: #ffffff;">Configuração</span>
                                 </a>
                             </li>';
                         }
@@ -189,7 +189,7 @@ $nome_usuario  = $explode_name[0];
                 echo "
                     <div class='alert alert-warning' role='alert'>
                         Seu e-mail ainda não foi verificado!
-                        <button type='button' style='float: right; font-size: 11px;' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Verificar Agora</button>
+                        <button type='button' style='float: right; font-size: 11px; background-color: #6e18a0; border: #6e18a0;' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Verificar Agora</button>
                     </div>
                 ";
 

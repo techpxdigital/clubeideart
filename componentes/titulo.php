@@ -56,7 +56,7 @@
                 <h3 class="mb-0"><?php echo $titulo_edt ?></h3>
                 <div class="mb-1 text-muted"><?php echo $autor_edt ?></div>
                 <div class="mb-1 text-muted">R$<?php echo $preco ?></div>
-                <a href="<?php echo $link_edt ?>" target="_blank"><button type="button" class="btn btn-primary btn-lg" style="margin-top: 30px; width: 100%;">Compre agora</button></a>
+                <a href="<?php echo $link_edt ?>" target="_blank"><button type="button" class="btn btn-primary btn-lg" style="margin-top: 30px; width: 100%; background-color: #6e18a0; border">Compre agora</button></a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <div class='col-auto d-none d-lg-block'>

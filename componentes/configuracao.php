@@ -3,7 +3,7 @@
 
     <div class="my-3 p-3 rounded shadow-sm" style="border: 1px solid #eeeeee;">
         <div class="d-flex text-muted pt-3">
-            <i class="fi fi-br-user-pen" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
+            <i class="fi fi-br-user-pen" style="font-size: 25px; color: #6e18a0; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <i class="fi fi-br-house-building" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
+            <i class="fi fi-br-house-building" style="font-size: 25px; color: #6e18a0; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm  w-100">
                 <div class="d-flex justify-content-between" >
@@ -27,7 +27,7 @@
 
     <div class="my-3 p-3 rounded shadow-sm" style="border: 1px solid #eeeeee;">
         <div class="d-flex text-muted pt-3">
-            <i class="fi fi-br-at" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
+            <i class="fi fi-br-at" style="font-size: 25px; color: #6e18a0; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <i class="fi fi-br-lock" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
+            <i class="fi fi-br-lock" style="font-size: 25px; color: #6e18a0; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="d-flex text-muted pt-3">
-            <i class="fi fi-br-cross-circle" style="font-size: 25px; color: #007bff; position: absolute; margin-top: -8px;"></i>
+            <i class="fi fi-br-cross-circle" style="font-size: 25px; color: #6e18a0; position: absolute; margin-top: -8px;"></i>
 
             <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
                 <div class="d-flex justify-content-between">

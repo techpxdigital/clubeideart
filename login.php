@@ -91,14 +91,14 @@
                         <label for="floatingPassword">Senha</label>
                     </div>
                     
-                    <br><button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+                    <br><button class="w-100 btn btn-lg btn-primary" style="background-color: #6e18a0; border: #6e18a0;" type="submit">Entrar</button>
 
                     <div class="checkbox mb-3" style="margin-top: 20px;">
                         <a href="assinatura.php"><button type="button" class="btn btn-secondary btn-lg" style="width: 100%;">Assine Já</button></a>
                     </div>
 
                     <div class="checkbox mb-3" style="margin-top: 20px;">
-                        <a href="recuperar.php"><p>Recuperar Acesso</p></a>
+                        <a href="recuperar.php"><p style="color: #ffffff;">Recuperar Acesso</p></a>
                     </div>
 
                     <p class="mt-5 mb-3" style="font-size: 13px; line-height: 17px; color: #fafafa;">Todos os direitos reservados a Ideart Produções &copy; <?php echo date('Y'); ?> | Desenvolvido por TechPX Digital</p>
