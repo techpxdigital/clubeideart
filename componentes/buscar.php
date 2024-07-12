@@ -46,7 +46,7 @@
                     <button class='btn btn-primary' type='submit' style='background-color: #6e18a0; border;'>Ver detalhes</button>
                     </form>
                 </div>
-                <div class='col-auto d-none d-lg-block'>
+                <div class='col-auto d-lg-block'>
                     <div style='width: 200px; height: 250px; background-image: url(img/livros/$img_edt); background-size: 100%;'>.</div>
                 </div>
             </div>

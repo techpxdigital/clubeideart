@@ -97,7 +97,7 @@ else{
         Seu pagamento ainda está pendente, realize seu pagamento ou <a href=''>atualize seu status</a>!
         <button type='button' style='float: right; font-size: 11px; background-color: #6e18a0; border: #6e18a0;' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Pagar agora</button>
     </div>
-    <div style='widht: 100%; height: 100vh'></div>
+    <div id='bottom_vol' style='widht: 100%; height: 100vh'></div>
     
     ";
 }

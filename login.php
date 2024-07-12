@@ -11,7 +11,8 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo_clube.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -49,8 +50,8 @@
 
 <body class="text-center" style="background-color: #000000;">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-4" id="mob_exc1"></div>
+        <div class="col-4" id="mob_menu_log">
             <main class="form-signin" style="padding: 0px 40px">
                 <form action="php/login.php" method="post" class="card-body p-12" style="margin-top: 8%;">
                     <img src="img/Logoidearte.png" style="width: 180px;" alt="logo">
@@ -105,7 +106,7 @@
                 </form>
             </main>
         </div>
-        <div class="col-4"></div>
+        <div class="col-4" id="mob_exc2"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

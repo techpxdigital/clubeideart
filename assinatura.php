@@ -13,6 +13,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/estilo_clube.css">
+
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
         <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -74,7 +77,7 @@
             ?>
 
             <div class="row g-5">
-            <div class="col-md-5 col-lg-4 order-md-last">
+            <div class="col-md-5 col-lg-4 order-md-last" id="col_pay">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-primary" style="color: #6e18a0;">Assinatura</span>
                 </h4>
@@ -197,7 +200,7 @@
                 <!-- <a href="api/sdk_pix.php"><button class="">Pagar com PIX</button></a> -->
 
             </div>
-            <div class="col-md-7 col-lg-8">
+            <div class="col-md-7 col-lg-8" id="col_cadastro">
                 <span class="text-primary"><h4 class="mb-3">Cadastre-se</h4></span>
                 <!-- FORM CONTINUA -->
                     <div class="row g-3">

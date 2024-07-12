@@ -13,7 +13,7 @@ $nome_usuario  = $explode_name[0];
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <form class="w-100" action="busca.php" method="post">
+    <form class="w-100" id="mob_form" action="busca.php" method="post">
     <input class="form-control form-control-dark" type="text" name="pesquisa" placeholder="Busque na editora" aria-label="Search">
     </form>
     <div class="navbar-nav" style="width: 25%;">
@@ -34,7 +34,7 @@ $nome_usuario  = $explode_name[0];
                 echo '
                 
                 <small style="color: green; position: absolute; margin: 10px 0px 0px 0px;"><i class="fi fi-br-crown" style="margin: 0px 0px 0px -25px; position: absolute; font-size: 16px;"></i> Assinatura Ativa</small>
-                <a class="nav-link px-3" style="float: right;" href="php/logout.php">Sair</a>
+                <a id="exit" class="nav-link px-3" style="float: right;" href="php/logout.php">Sair</a>
                 
                 ';
             }
@@ -56,7 +56,7 @@ $nome_usuario  = $explode_name[0];
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse" style="background: #6e18a0;">
             <div class="position-sticky pt-3">
-                <ul class="nav flex-column" style="position: fixed; margin-top: 0%;">
+                <ul class="nav flex-column" id="menu_lateral">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.php">
                             <i class="fi fi-br-comment-alt-check" style="position: absolute; margin-top: 3px; color: #ffffff;"></i>

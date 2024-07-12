@@ -17,7 +17,7 @@
             <p class="lead">CEO Editora Idearte</p>
         </div>
         <div class="col-md-5">
-            <div style="width: 500px; height: 500px; background-image: url(img/ceo.jpg); background-size: 100%;"></div>
+            <div id="img_ceo"></div>
         </div>
     </div>
     <footer class="pt-3 mt-4 text-body-secondary border-top">
